@@ -1,0 +1,3 @@
+la base de datos que uso es MySQL y en local con
+Xampp asi que probablemente no funcione ya que debo
+de configurar el proyecto con las tablas de MySQL
