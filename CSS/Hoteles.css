@@ -75,7 +75,7 @@ body{
 }
 
 
-/*--Aqui se controla los botones del envabezado--*/
+/*--Aqui se controla los botones del encabezado--*/
 	
 .menu nav ul li a {
 	color: skyblue;
@@ -85,6 +85,10 @@ body{
 
 .menu nav ul li a:hover{
 	color: brown;
+	text-decoration: underline white;
+}
+
+.btn_axes{
 	text-decoration: underline white;
 }
 
@@ -120,25 +124,7 @@ body{
 	padding-top: 120px;
 	padding-bottom: 100px;
 }
-.cover{
-	max-width: 100%;
-	align-items: center;
-}
 
-.img_cover{
-	width: 100%;
-	height: 600px;
-	overflow: hidden;
-	display: flex;
-	align-items: center; /* Centra verticalmente */
-    justify-content: center; /* Centra horizontalmente */
-}
-
-.img_cover img{
-	width: 100%;
-	height: auto;
-	object-fit: cover;
-}
 
 /*Aqui se ara el estilo de los botones de Proximo destino*/
 
@@ -147,31 +133,22 @@ body{
 	margin-left: 20px;
 }
 
-/* Aplica un display grid al contenedor .content_img */
-.content_img {
-  	display: grid;
-  	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Ajusta automáticamente las columnas */
-  	gap: 8px; /* Espacio entre elementos */
-  	justify-items: center; /* Centra los elementos horizontalmente */
-  	align-items: center; /* Centra los elementos verticalmente */
-  	margin: 10px;
-}
 
-/* Estilo para las imágenes */
+/*----Estilo para las imágenes del carousel----*/
 .box_img {
-	display: flex;
+	background-color: skyblue;
+	border-radius: 10px;
   	align-items: center; /* Centra los elementos horizontalmente */
-  	justify-content: center; /* Centra los elementos verticalmente */
   	text-align: center; /* Centra el texto horizontalmente */
-  	margin: 5px;
+  	margin: 20px;
 }
 
 .box_img img {
   	border-radius: 10px; /* Aplica un borde redondeado */
+  	margin-top: 10px;
   	max-width: 100%; /* Ajusta el tamaño máximo de la imagen */
     width: 400px; /* Ajusta el ancho según las necesidades */
     height: 300px; /* Ajusta el alto según las necesidades */
-    object-fit: cover;
 }
 
 .box_img:hover img {
@@ -179,21 +156,58 @@ body{
   transition: filter 0.3s ease; /* Aplica una transición suave de 0.3 segundos */
 }
 
-.box_img a{
-	font-size: 20px; /*aumentar el tamaño de la fuente del boton*/
+/*---------------------------------------------------------------*/
+/*---Estilo para las estrellas--*/
+
+/* Estilo para ocultar los botones de radio */
+.star input[type="radio"] {
+    display: none;
 }
 
-/* Estilo para los botones */
-.btn_zona {
-	position: absolute;
-  	background-color: orange;
-  	opacity: 0.9;
-  	border-radius: 10px;
-  	padding: 5px 10px;
-  	cursor: pointer;
+.clasificacion{
+	direction: rtl;
+	unicode-bidi: bidi-override;
+	margin: 5px;
+	text-decoration: none;
 }
 
-/*-------------------------------------------------------*/
+/* Estilo para las estrellas vacías */
+.star label::before {
+    content: '★';
+    font-size: 30px;
+    color: black; /* Color de las estrellas vacías */
+}
+
+/* Estilo para las estrellas seleccionadas */
+.star input[type="radio"]:checked ~ label::before {
+    color: gold;; /* Color de las estrellas seleccionadas (dorado) */
+}
+
+.info{
+	padding: 5px;
+	margin: 5px;
+}
+.text_info {
+  background-color: rgba(128, 128, 128, 0.8);
+  border-radius: 10px;
+}
+
+.text_info h3{
+	font-size: 16px;
+	color: black;
+}
+
+.puntaje {
+	margin-top: 5px;
+  background-color: rgba(128, 128, 128, 0.8);
+  border-radius: 10px;
+}
+
+.puntaje h3{
+	font-size: 16px;
+	color: black;
+}
+/*--------------------------------*/
 
 /* Estilos CSS para el carrusel */
 .carousel-container {
@@ -230,6 +244,7 @@ body{
     border: none;
     cursor: pointer;
 }
+
 #prevBtn {
     left: -10px;
     z-index: 100;
@@ -240,30 +255,11 @@ body{
     z-index: 100;
 }
 
-footer{
-	padding-top: 0px;
-	padding: 200px;
-	text-align: center;
-	color: green;
-	background-color: blue;
-	margin-top: 0px;
-}
-
-footer h1{
-	color: white;
-}
-
-footer h2{
-	color: white;
-}
-
-
 /*--SISTEMA RESPONSIVO--*/
 
 
 
 /*-------------------------*/
-
 
 
 .cerrar-sesion {
@@ -286,16 +282,16 @@ footer h2{
 
 /*----NOTAS PARA EL QUE REVISE MI CODIGO Y PARA MI----
 
-la etiqueta curso y border-radius pueden ayudar a que todo se sienta mejor
-uuff hacer esta parte fue de lo mas complicado en cuanto a estilos
-
+Reciclar el css ahorra mucho tiempo pero siempre se me van cosas repetidas
+copie el anterior css por que requiero agretgar unos estilos extra sin afectar
+el estilo de el loby principal.
                                           
                                           --ATTM: Francisco josue--
 
 PD:guardad el css y recargar cuando no se aplique correctamente y si no funciona poner un
    nombre diferente y llamarlo correctamente en el html
-PD:Las imagenes usadas son muy pesadas hay que vajarles la resolcion manualmente
+PD:Las imagenes usadas son muy pesadas hay que vajarles la resolcion manualmente 3k es demaciado
 
---COMENTARIO NUMERO 3--
-
+--COMENTARIO NUMERO 4--
+huy estoy aprendiendo mucho con esto, aunque estoy reconsiderando usar firebase...
 */

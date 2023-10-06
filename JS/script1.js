@@ -16,18 +16,6 @@ var caja_trasera_login = document.querySelector(".caja__trasera-login");
 var caja_trasera_registro = document.querySelector(".caja__trasera-registro");
 var estado = 0;
 
-
-//aqui estoy intentando hacer que aparesca una alerta cuando
-//el formulario esta bacio
-var alerta = document.getElementById("alerta")
-var btn_regis = document.getElementById("btn_regis")
-
-var nombre = document.querySelector("#nombre");
-var correo = document.querySelector("input[name='correo']");
-var usuario = document.querySelector("input[name='usuario']");
-var contrasena = document.querySelector("input[name='contrasena']");
-
-
 //-------------------------------------------------------------------------//
 
 //----CREACIÓN DE FUNCIONES----//
@@ -93,6 +81,16 @@ function registro() {
         caja_trasera_login.style.opacity = "1";
     }
 }
+
+//----NOTAS PARA EL QUE REVISE MI CODIGO Y PARA MI----//
+//antes de poner este comentario me ocurrio un bug considerado como muy raro para mi yo del pasado
+//y es que tenia una imagen tan grande que el DOM no se cargaba y al llamar la funcion a secas
+//pues rompia todo por que modificaba algo que no existia, me di cuenta luego de arrancarme los pelos
+//por un dia,  por lo tanto si voy a poner una imagen seria bueno que no sobrepase el 1k como mucho
+                                          
+                                          //--ATTM: Francisco josue--//
+//PD:CTL+G no guarda el codigo en Sublime text...
+//--COMENTARIO NUMERO 2--//
 
 //-------------------------------------------------------------------------//
 
