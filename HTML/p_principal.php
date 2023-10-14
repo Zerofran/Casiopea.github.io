@@ -172,7 +172,7 @@
 		</div>
 		<!--Pie de paguina-->
 		<footer>
-			<h1>Este es el pie de paguina</h1>
+			<h1>Este es el pie de paguina (Orlando)</h1>
 			<h2>Lorem Impush</h2>
 		</footer>
 
