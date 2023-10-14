@@ -1,0 +1,354 @@
+@font-face {
+    font-family: 'nunito';
+    src: url('../font/Nunito-Black.ttf') format('truetype');
+    /*font-family: 'nunito', Arial, sans-serif;*/
+}
+
+@font-face {
+    font-family: 'LemonMilk';
+    src: url('../font/LEMONMILK-Light.otf') format('truetype');
+    /*font-family: 'LemonMilk', Helvetica, sans-serif;*/
+}
+
+*{
+	margin: 0;
+	padding: 0px;
+	box-sizing: border-box;
+	text-decoration: none;
+	font-family: 'nunito', Arial, sans-serif;
+}
+
+
+header {
+    width: 100%;
+    height: 120px;
+    position: fixed;
+    z-index: 100;
+    background-color: rgba(128, 128, 128, 0.9);
+}
+
+body{
+	background-color: white;
+}
+
+
+.container__header {
+	max-width: 1700px;
+	height: 100%;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0px 20px;
+
+}
+
+.logo{
+	display: flex;
+	align-items: center;
+	position: relative;
+	z-index: 1;
+}
+
+.logo img {
+	width: 200px;
+}
+
+.menu {
+	margin-top: 10px;
+	display: flex;
+	align-items: center;
+}
+
+.menu nav {
+	margin: 0px 20px;
+}
+
+.menu nav ul {
+	display: flex;
+}
+
+
+.menu nav ul li {
+	list-style: none;
+	margin: 20px 20px;
+}
+
+
+/*--Aqui se controla los botones del encabezado--*/
+	
+.menu nav ul li a {
+	color: skyblue;
+	font-size: 30px;
+	position: relative;
+}
+
+.menu nav ul li a:hover{
+	color: brown;
+	text-decoration: underline white;
+}
+
+.btn_axes{
+	text-decoration: underline white;
+}
+
+/*-------------------------------------------*/
+
+.menu .socialMedia {
+	margin: 0px 0px;
+}
+
+.menu .socialMedia a {
+	margin: 0px 4px;
+}
+
+/*--modificar la imagen de social media al color deseado cuando el maus esta sobre el*/
+.menu .socialMedia img{
+	width: 50px;
+	z-index: 2;
+}
+
+.socialMedia img {
+    filter: grayscale(100%); /* Convierte la imagen en blanco y negro */
+    transition: filter 0.5s ease; /* Aplica una transición suave */
+    text-decoration: none;
+}
+
+.socialMedia:hover img {
+    filter: hue-rotate(180deg); /* Cambia el color a azul al pasar el ratón */
+    text-decoration: underline;
+}
+/*-----------------------------------------------------------------------------------*/
+
+.container__cover{
+	padding-top: 120px;
+	padding-bottom: 100px;
+}
+
+
+/*Aqui se ara el estilo de los botones de Proximo destino*/
+
+.text_head{
+	margin-top: 30px;
+	margin-left: 20px;
+}
+
+
+/*----Estilo para las imágenes del carousel----*/
+.box_img {
+	background-color: skyblue;
+	border-radius: 10px;
+  	align-items: center; /* Centra los elementos horizontalmente */
+  	text-align: center; /* Centra el texto horizontalmente */
+  	margin: 20px;
+}
+
+.box_img img {
+  	border-radius: 10px; /* Aplica un borde redondeado */
+  	margin-top: 10px;
+  	max-width: 100%; /* Ajusta el tamaño máximo de la imagen */
+    width: 400px; /* Ajusta el ancho según las necesidades */
+    height: 300px; /* Ajusta el alto según las necesidades */
+}
+
+.box_img:hover img {
+  filter: brightness(0.7); /* Oscurece la imagen al 70% */
+  transition: filter 0.3s ease; /* Aplica una transición suave de 0.3 segundos */
+}
+
+/*---------------------------------------------------------------*/
+/*---Estilo para las estrellas--*/
+
+/* Estilo para ocultar los botones de radio */
+.star input[type="radio"] {
+    display: none;
+}
+
+.clasificacion{
+	direction: rtl;
+	unicode-bidi: bidi-override;
+	margin: 5px;
+	text-decoration: none;
+}
+
+/* Estilo para las estrellas vacías */
+.star label::before {
+    content: '★';
+    font-size: 30px;
+    color: black; /* Color de las estrellas vacías */
+}
+
+/* Estilo para las estrellas seleccionadas */
+.star input[type="radio"]:checked ~ label::before {
+    color: gold;; /* Color de las estrellas seleccionadas (dorado) */
+}
+
+.info{
+	padding: 5px;
+	margin: 5px;
+}
+.text_info {
+  background-color: rgba(128, 128, 128, 0.8);
+  border-radius: 10px;
+}
+
+.text_info h3{
+	font-size: 16px;
+	color: black;
+}
+
+.puntaje {
+	margin-top: 5px;
+  background-color: rgba(128, 128, 128, 0.8);
+  border-radius: 10px;
+}
+
+.puntaje h3{
+	font-size: 16px;
+	color: black;
+}
+/*--------------------------------*/
+
+/* Estilos CSS para el carrusel */
+.carousel-container {
+    position: relative;
+    width: 80%; /* Ajusta el ancho según tus necesidades */
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carousel {
+	display: flex;
+	flex-direction: row;
+    transition: transform 0.5s ease;
+    align-items: flex-start;
+    z-index: 2;
+}
+
+
+.carousel li {
+	list-style: none;
+    min-width: 33.33%; /* Cada elemento ocupa el 100% del contenedor */
+    margin: 0px; /* Espacio entre imágenes*/
+    padding: 0;
+}
+
+/* Botones de navegación */
+.btn_carrucel {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+#prevBtn {
+    left: -10px;
+    z-index: 100;
+}
+
+#nextBtn {
+    right: -10px;
+    z-index: 100;
+}
+
+#chat_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Establecer la altura del contenedor al 100% del viewport height */
+}
+
+#prompt {
+    text-align: center;
+    width: 80%; /* Ancho del cuadro de entrada */
+    padding: 10px; /* Espaciado interno del cuadro de entrada */
+    margin: 10px 0; /* Margen alrededor del cuadro de entrada */
+    border: 1px solid #ccc; /* Borde del cuadro de entrada */
+    border-radius: 5px; /* Radio de borde para esquinas redondeadas */
+    font-size: 16px; /* Tamaño de fuente del texto en el cuadro de entrada */
+}
+
+#generate {
+    padding: 10px 20px; /* Espaciado interno del botón */
+    margin: 10px 0; /* Margen alrededor del botón */
+    border: none; /* Eliminar el borde del botón */
+    border-radius: 5px; /* Radio de borde para esquinas redondeadas */
+    background-color: #4caf50; /* Color de fondo del botón */
+    color: white; /* Color del texto en el botón */
+    font-size: 16px; /* Tamaño de fuente del texto en el botón */
+    cursor: pointer; /* Cambiar el cursor al pasar el mouse sobre el botón */
+}
+
+#generate:hover {
+    background-color: #45a049;
+}
+
+/* Estilos para el cuadro de texto del chat */
+#chatbox {
+    width: 80%; /* Ancho del cuadro de texto */
+    height: 300px; /* Altura del cuadro de texto */
+    overflow-y: auto; /* Agregar barra de desplazamiento vertical si el contenido es demasiado grande */
+    border: 1px solid #ccc; /* Borde del cuadro de texto */
+    border-radius: 5px; /* Radio de borde para esquinas redondeadas */
+    padding: 10px; /* Espaciado interno del cuadro de texto */
+    margin-bottom: 20px; /* Margen en la parte inferior del cuadro de texto */
+    font-size: 14px; /* Tamaño de fuente del texto en el cuadro de texto */
+}
+
+/* Estilos para los mensajes del chat */
+.message {
+    margin-bottom: 10px; /* Margen en la parte inferior de cada mensaje */
+}
+
+/* Estilos para los mensajes del chat del ChatBot */
+.bot-message {
+    color: #0084ff; /* Color del texto para los mensajes del ChatBot */
+}
+
+/* Estilos para los mensajes del usuario */
+.user-message {
+    color: #4caf50; /* Color del texto para los mensajes del usuario */
+}
+
+/*--SISTEMA RESPONSIVO--*/
+
+/*-------------------------*/
+
+.cerrar-sesion {
+    position: fixed;
+    bottom: 10px; /* Ajusta la distancia desde el borde inferior */
+    left: 10px; /* Ajusta la distancia desde el borde izquierdo */
+    background-color: red; /* Cambia el color de fondo */
+    color: white; /* Cambia el color del texto */
+    padding: 10px 20px; /* Ajusta el relleno */
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 200; /* Asegura que el botón esté sobre otros elementos */
+}
+
+.cerrar-sesion:hover {
+    background-color: darkred; /* Cambia el color de fondo al pasar el cursor sobre el botón */
+}
+
+
+/*----NOTAS PARA EL QUE REVISE MI CODIGO Y PARA MI----
+
+Reciclar el css ahorra mucho tiempo pero siempre se me van cosas repetidas
+copie el anterior css por que requiero agretgar unos estilos extra sin afectar
+el estilo de el loby principal.
+                                          
+                                          --ATTM: Francisco josue--
+
+PD:guardad el css y recargar cuando no se aplique correctamente y si no funciona poner un
+   nombre diferente y llamarlo correctamente en el html
+PD:Las imagenes usadas son muy pesadas hay que vajarles la resolcion manualmente 3k es demaciado
+
+--COMENTARIO NUMERO 4--
+huy estoy aprendiendo mucho con esto, aunque estoy reconsiderando usar firebase...
+*/
