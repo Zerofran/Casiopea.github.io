@@ -42,10 +42,11 @@
 			<div class="menu"> 
 				<nav>
 					<ul>
+						<li><a href="Bontones/chatbot.php">Preguntame!</a></li>
 						<li><a href="Bontones/Hoteles.php">Hoteles</a></li>
 						<li><a href="#">Restaurantes</a></li>
 						<li><a href="#">Gastronomía</a></li>
-						<li><a href="#">rutas</a></li>
+						<li><a href="#">Rutas</a></li>
 					</ul>
 				</nav>
 				

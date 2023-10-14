@@ -41,10 +41,11 @@
 			<div class="menu"> 
 				<nav>
 					<ul>
+						<li><a href="chatbot.php">Preguntame!</a></li>
 						<li><a href="#" class="btn_axes">Hoteles</a></li>
 						<li><a href="#">Restaurantes</a></li>
 						<li><a href="#">Gastronomía</a></li>
-						<li><a href="#">rutas</a></li>
+						<li><a href="#">Rutas</a></li>
 					</ul>
 				</nav>
 
