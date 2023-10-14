@@ -39,6 +39,14 @@
 				</a>
 			</div>
 
+	        <!-- Agregar aquí el botón de menú hamburguesa -->
+	        <div class="menu-toggle">
+	            <div class="bar"></div>
+	            <div class="bar"></div>
+	            <div class="bar"></div>
+	        </div>
+	        <!-- Fin del botón de menú hamburguesa -->
+
 			<div class="menu"> 
 				<nav>
 					<ul>
@@ -75,7 +83,7 @@
 			<div class="content_img">
 				<div class="box_img">
 					<img src="../IMG/img2.png" alt="">
-					<a href="#" class="btn_zona">Granada</a>
+					<a href="Destinos_grit/Granada.php" class="btn_zona">Granada</a>
 				</div>
 				<div class="box_img">
 					<img src="../IMG/img2.png" alt="">
@@ -172,12 +180,13 @@
 		</div>
 		<!--Pie de paguina-->
 		<footer>
-			<h1>Este es el pie de paguina (Orlando)</h1>
+			<h1>Este es el pie de paguina</h1>
 			<h2>Lorem Impush</h2>
 		</footer>
 
 	</main>
 	<a href="../PHP/cerrar_sesion.php" class="cerrar-sesion">Cerrar Sesión</a>
 	<script type="text/javascript" src="../JS/carrusel.js"></script>
+	<script type="text/javascript" src="../JS/menuAmburgesa.js"></script>
 </body>
 </html>

@@ -43,6 +43,7 @@ body{
 
 }
 
+
 .logo{
 	display: flex;
 	align-items: center;
@@ -259,6 +260,90 @@ footer h2{
 
 
 /*--SISTEMA RESPONSIVO--*/
+/* Estilos para tamaños de pantalla más grandes */
+@media (min-width: 1200px) {
+    .menu {
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+    }
+
+    .logo img {
+        max-width: 200px; /* Ajusta el tamaño máximo del logotipo */
+    }
+
+    .menu nav {
+        margin: 0px 20px;
+    }
+
+    .menu nav ul li {
+        margin: 20px 20px;
+    }
+
+    .menu nav ul li a {
+        font-size: 30px;
+    }
+
+    /* Otros estilos específicos para tamaños de pantalla más grandes */
+}
+
+
+/* Estilos para tamaños de pantalla más pequeños (menú hamburguesa) */
+@media (max-width: 1200px) {
+    .menu {
+        flex-direction: column; /* Coloca los elementos en columna */
+        text-align: center; /* Centra el texto */
+    }
+    .menu nav ul {
+    flex-direction: column;
+    }
+
+    .logo img {
+        max-width: 200px; /* Ajusta el tamaño máximo del logotipo */
+    }
+
+    .menu nav {
+        display: none; /* Oculta el menú de navegación */
+    }
+
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        padding: 10px;
+    }
+
+    .bar {
+        background: #333;
+        height: 4px;
+        width: 30px;
+        margin: 3px 0;
+        transition: 0.4s;
+    }
+
+    /* Estilos para mostrar el menú desplegable */
+    .menu nav.show-menu {
+        display: flex;
+        flex-direction: column;
+        background: #333;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        z-index: 1;
+    }
+
+    .menu nav.show-menu ul {
+        padding: 20px;
+    }
+
+    .menu nav.show-menu ul li {
+        list-style: none;
+        margin: 10px 0;
+    }
+}
+
 
 
 
