@@ -9,15 +9,28 @@
 	$contrasena = $_POST['contrasena'];
 
 
-	if ( empty($correo) or empty($contrasena)) {
-		echo '
-			<script>
-				alert("Uno o mas espacios no fueron rellenados")
-				window.location = "../index.php"
-			</script>
-		';
-		exit();
+	if (empty($correo) or empty($contrasena)) {
+	    $camposFaltantes = array();
+
+	    if (empty($correo)) {
+	        $camposFaltantes[] = "correo";
+	    }
+
+	    if (empty($contrasena)) {
+	        $camposFaltantes[] = "contraseña";
+	    }
+
+	    $mensaje = "Los siguientes campos no fueron rellenados: " . implode(", ", $camposFaltantes);
+
+	    echo '
+	        <script>
+	            alert("' . $mensaje . '")
+	            window.location = "../index.php"
+	        </script>
+	    ';
+	    exit();
 	}
+
 
 
 	//----ENCRIPTADO BASICO DE LA CONTRASEÑA Y CORREO----//

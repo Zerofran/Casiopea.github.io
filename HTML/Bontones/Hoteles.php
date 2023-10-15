@@ -21,7 +21,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Hoteles</title>
+	<title>Pagina principal</title>
 
 	<!-- aqui se linquea hacia la hoja de estilos .css -->
 	<link rel="stylesheet" type="text/css" href="../../CSS/Hoteles.css">
@@ -122,7 +122,7 @@
 					<li>
 					    <div class="box_img">
 					        <img src="../../IMG/img3.png" alt="">
-					        <form class="star">
+					        <form class="star" id="star">
 					            <fieldset class="clasificacion">
 					                <legend>Tu puntuación:</legend>
 					                <input id="radio1_3" type="radio" name="estrellas_3" value="5">
@@ -176,6 +176,5 @@
 
 	<a href="../PHP/cerrar_sesion.php" class="cerrar-sesion">Cerrar Sesión</a>
 	<script type="text/javascript" src="../../JS/carrusel.js"></script>
-
 </body>
 </html>

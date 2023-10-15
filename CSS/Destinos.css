@@ -28,9 +28,26 @@ header {
 }
 
 body{
-	background-color: white;
+  /* La imagen colocada es un placeolder ya que no tengo un fondo listo para usar*/
+  background-image: url(../IMG/img11.JPG);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
 }
 
+body:before {
+  content: "";
+  width: 100%;
+  min-height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /*background: linear-gradient(to bottom, orange, skyblue); */
+  backdrop-filter: blur(50px);
+  opacity: 0.7;
+  z-index: -1;
+}
 
 .container__header {
 	max-width: 1700px;
@@ -121,9 +138,60 @@ body{
 /*-----------------------------------------------------------------------------------*/
 
 .container__cover{
-	padding-top: 120px;
+	padding-top: 160px;
 	padding-bottom: 100px;
 }
+
+.titulo h1{
+	border-radius: 10px;
+	background-color: orange; /* Color de fondo gris */
+	padding: 10px; /* Relleno para el espacio alrededor del texto */
+	text-align: center; /* Centra el texto horizontalmente */
+	margin: 5px; /* Espacio entre el texto y los bordes del div */
+	max-width: 400px; /* Ancho máximo para el div (ajusta según tus necesidades) */
+	margin: 0 auto; /* Centra el div horizontalmente en la página */
+}
+
+/* En tu archivo CSS Destinos.css */
+.cover {
+  display: flex; /* Utilizamos display: flex para alinear los elementos horizontalmente */
+  justify-content: center; /* Centra los elementos horizontalmente */
+  align-items: center; /* Centra los elementos verticalmente */
+}
+
+.btn_cover1 {
+  text-align: center; /* Centra el contenido dentro de la primera sección */
+  padding-top: 10px;
+}
+
+.btn_cover1 div {
+  background-color: #ccc; /* Color de fondo gris */
+  padding: 35px 10px; /* Relleno para el espacio alrededor del texto */
+  text-align: center; /* Centra el texto horizontalmente */
+  margin: 20px; /* Espacio entre los divs */
+  border-radius: 10px;
+}
+
+.btn_cover2 {
+  display: flex;
+  flex-direction: column; /* Coloca los elementos de la segunda sección en una columna */
+  align-items: center; /* Centra los elementos verticalmente dentro de la segunda sección */
+  margin-left: 200px; /* Espacio entre las dos secciones, puedes ajustarlo según tus preferencias */
+}
+
+/* Estilos adicionales según tu preferencia */
+.btn_cover2 a {
+  text-decoration: none;
+  padding: 10px 20px; /* Ajusta el relleno para igualar el espacio en la parte superior e inferior, con 0 en los lados */
+  color: white;
+  background-color: skyblue;
+  border-radius: 10px;
+  margin: 5px 0;
+  width: 100%; /* Añade esto para que los botones se expandan horizontalmente */
+  text-align: center; /* Añade esto para centrar el texto horizontalmente */
+}
+
+
 
 
 /*Aqui se ara el estilo de los botones de Proximo destino*/
@@ -134,149 +202,30 @@ body{
 }
 
 
-/*----Estilo para las imágenes del carousel----*/
-.box_img {
-	background-color: skyblue;
-	border-radius: 10px;
-  	align-items: center; /* Centra los elementos horizontalmente */
-  	text-align: center; /* Centra el texto horizontalmente */
-  	margin: 20px;
-}
-
-.box_img img {
-  	border-radius: 10px; /* Aplica un borde redondeado */
-  	margin-top: 10px;
-  	max-width: 100%; /* Ajusta el tamaño máximo de la imagen */
-    width: 400px; /* Ajusta el ancho según las necesidades */
-    height: 300px; /* Ajusta el alto según las necesidades */
-}
-
-.box_img:hover img {
-  filter: brightness(0.7); /* Oscurece la imagen al 70% */
-  transition: filter 0.3s ease; /* Aplica una transición suave de 0.3 segundos */
-}
-
-/*---------------------------------------------------------------*/
-/*---Estilo para las estrellas--*/
-
-/* Estilo para ocultar los botones de radio */
-.star input[type="radio"] {
-    display: none;
-}
-
-.clasificacion{
-	direction: rtl;
-	unicode-bidi: bidi-override;
-	margin: 5px;
-	text-decoration: none;
-}
-
-/* Estilo para las estrellas vacías */
-.star label::before {
-    content: '★';
-    font-size: 30px;
-    color: black; /* Color de las estrellas vacías */
-}
-
-/* Estilo para las estrellas seleccionadas */
-.star input[type="radio"]:checked ~ label::before {
-    color: gold;; /* Color de las estrellas seleccionadas (dorado) */
-}
-
-.info{
-	padding: 5px;
-	margin: 5px;
-}
-.text_info {
-  background-color: rgba(128, 128, 128, 0.8);
-  border-radius: 10px;
-}
-
-.text_info h3{
-	font-size: 16px;
-	color: black;
-}
-
-.puntaje {
-	margin-top: 5px;
-  background-color: rgba(128, 128, 128, 0.8);
-  border-radius: 10px;
-}
-
-.puntaje h3{
-	font-size: 16px;
-	color: black;
-}
-/*--------------------------------*/
-
-/* Estilos CSS para el carrusel */
-.carousel-container {
-    position: relative;
-    width: 80%; /* Ajusta el ancho según tus necesidades */
-    margin: 0 auto;
-    overflow: hidden;
-}
-
-.carousel {
-	display: flex;
-	flex-direction: row;
-    transition: transform 0.5s ease;
-    align-items: flex-start;
-    z-index: 2;
-}
-
-
-.carousel li {
-	list-style: none;
-    min-width: 33.33%; /* Cada elemento ocupa el 100% del contenedor */
-    margin: 0px; /* Espacio entre imágenes*/
-    padding: 0;
-}
-
-/* Botones de navegación */
-.btn_carrucel {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-}
-
-#prevBtn {
-    left: -10px;
-    z-index: 100;
-}
-
-#nextBtn {
-    right: -10px;
-    z-index: 100;
-}
-
-
-
 /*--SISTEMA RESPONSIVO--*/
-/* Media Queries para dispositivos móviles */
-@media (max-width: 768px) {
-    /* Redefine los estilos para pantallas más pequeñas */
-    .box_img img {
-        width: 100%; /* Ajusta el ancho al 100% del contenedor en dispositivos móviles */
-    }
 
-    .text_head {
-        margin-top: 10px; /* Espaciado superior reducido en dispositivos móviles */
-    }
-
-    .star input[type="radio"] {
-        margin: 5px 0; /* Espaciado entre las estrellas reducido en dispositivos móviles */
-    }
-}
 
 
 /*-------------------------*/
 
+
+
+footer{
+    padding-top: 0px;
+    padding: 200px;
+    text-align: center;
+    color: green;
+    background-color: blue;
+    margin-top: 0px;
+}
+
+footer h1{
+    color: white;
+}
+
+footer h2{
+    color: white;
+}
 
 .cerrar-sesion {
     position: fixed;
