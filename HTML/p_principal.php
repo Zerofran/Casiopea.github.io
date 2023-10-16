@@ -26,7 +26,10 @@
 
 	<!-- aqui se linquea hacia la hoja de estilos .css -->
 	<link rel="stylesheet" type="text/css" href="../CSS/style_principal.css">
-
+	<!--Links para las fuentes-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
 </head>
 <body>
 	<!--HEADER - MENU-->
@@ -54,6 +57,7 @@
 						<li><a href="Bontones/Hoteles.php">Hoteles</a></li>
 						<li><a href="#">Restaurantes</a></li>
 						<li><a href="#">Gastronomía</a></li>
+						<li><a href="#">Museos</a></li>
 						<li><a href="#">Rutas</a></li>
 					</ul>
 				</nav>
@@ -180,10 +184,21 @@
 			</div>
 		</div>
 		<!--Pie de paguina-->
-		<footer>
-			<h1>Este es el pie de paguina</h1>
-			<h2>Lorem Impush</h2>
-		</footer>
+		<footer class="footer">
+			<img src="../IMG/imagotipo_negativo.png" alt="Logo de la Aplicación">
+        	<div class="social-icons">
+				<a href="#" target="_blank"><img src="../IMG/Icons/Instagram.svg" alt="Instagram" /></a>
+				<a href="#" target="_blank"><img src="../IMG/Icons/Twitter.svg" alt="Twitter" /></a>
+				<a href="#" target="_blank"><img src="../IMG/Icons/Facebook.svg" alt="Facebook" /></a>
+        	</div>
+        	<p>Managua-Nicaragua <br>
+			APP Nica Destiny</p>
+        	<div class="footer-menu">
+           	 	<a href="#">Información</a> |
+            	<a href="#">Privacidad</a> |
+           		<a href="#">Cookies</a>
+        	</div>
+  	  	</footer>
 
 	</main>
 	<a href="../PHP/cerrar_sesion.php" class="cerrar-sesion">Cerrar Sesión</a>
