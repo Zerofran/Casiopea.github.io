@@ -18,13 +18,13 @@
 	font-family: 'nunito', Arial, sans-serif;
 }
 
-
+/* Aqui empieza el codigo para el header */
 header {
     width: 100%;
-    height: 120px;
+    height: 145px;
     position: fixed;
     z-index: 100;
-    background-color: rgba(128, 128, 128, 0.9);
+    background-color: rgba(225, 225, 225, 0.9);
 }
 
 body{
@@ -42,6 +42,7 @@ body{
 	padding: 0px 20px;
 
 }
+
 
 .logo{
 	display: flex;
@@ -71,25 +72,46 @@ body{
 
 .menu nav ul li {
 	list-style: none;
-	margin: 20px 20px;
+	margin: 25px 25px;
 }
 
 
-/*--Aqui se controla los botones del encabezado--*/
+/*--Aqui se controla los botones del envabezado--*/
 	
 .menu nav ul li a {
-	color: skyblue;
-	font-size: 30px;
+	color: rgb(0, 103, 165);
+	font-size: 25px;
 	position: relative;
 }
 
 .menu nav ul li a:hover{
-	color: brown;
-	text-decoration: underline white;
+	color: rgb(90, 174, 243);
+	text-decoration: underline rgb(90, 174, 243);
 }
 
-.btn_axes{
-	text-decoration: underline white;
+/*-------------------------------------------*/
+
+.menu .socialMedia {
+	margin: 0px 0px;
+}
+
+.menu .socialMedia a {
+	margin: 0px 4px;
+}
+
+
+
+/*--Aqui se controla los botones del envabezado--*/
+	
+.menu nav ul li a {
+	color: rgb(0, 103, 165);
+	font-size: 25px;
+	position: relative;
+}
+
+.menu nav ul li a:hover{
+	color: rgb(90, 174, 243);
+	text-decoration: underline rgb(90, 174, 243);
 }
 
 /*-------------------------------------------*/
@@ -121,11 +143,13 @@ body{
 /*-----------------------------------------------------------------------------------*/
 
 .container__cover{
-	padding-top: 120px;
+	padding-top: 145px;
 	padding-bottom: 100px;
 }
-
-
+.cover{
+	max-width: 100%;
+	align-items: center;
+}
 /*Aqui se ara el estilo de los botones de Proximo destino*/
 
 .text_head{
@@ -258,23 +282,86 @@ body{
 
 
 /*--SISTEMA RESPONSIVO--*/
-/* Media Queries para dispositivos móviles */
-@media (max-width: 768px) {
-    /* Redefine los estilos para pantallas más pequeñas */
-    .box_img img {
-        width: 100%; /* Ajusta el ancho al 100% del contenedor en dispositivos móviles */
+/* Estilos para tamaños de pantalla más grandes */
+@media (min-width: 1200px) {
+    .menu {
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
     }
 
-    .text_head {
-        margin-top: 10px; /* Espaciado superior reducido en dispositivos móviles */
+    .logo img {
+        max-width: 200px; /* Ajusta el tamaño máximo del logotipo */
     }
 
-    .star input[type="radio"] {
-        margin: 5px 0; /* Espaciado entre las estrellas reducido en dispositivos móviles */
+    .menu nav {
+        margin: 0px 20px;
     }
+
+    .menu nav ul li {
+        margin: 20px 20px;
+    }
+
+    /* Otros estilos específicos para tamaños de pantalla más grandes */
 }
 
 
+/* Estilos para tamaños de pantalla más pequeños (menú hamburguesa) */
+@media (max-width: 1200px) {
+    .menu {
+        flex-direction: column; /* Coloca los elementos en columna */
+        text-align: center; /* Centra el texto */
+    }
+    .menu nav ul {
+    flex-direction: column;
+    }
+
+    .logo img {
+        max-width: 200px; /* Ajusta el tamaño máximo del logotipo */
+    }
+
+    .menu nav {
+        display: none; /* Oculta el menú de navegación */
+    }
+
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        padding: 10px;
+    }
+
+    .bar {
+        background: #333;
+        height: 4px;
+        width: 30px;
+        margin: 3px 0;
+        transition: 0.4s;
+    }
+
+    /* Estilos para mostrar el menú desplegable */
+    .menu nav.show-menu {
+        display: flex;
+        flex-direction: column;
+        background: #333;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        z-index: 1;
+    }
+
+    .menu nav.show-menu ul {
+        padding: 20px;
+    }
+
+    .menu nav.show-menu ul li {
+        list-style: none;
+        margin: 10px 0;
+    }
+}
+/* -------------------------------------- */
 /*-------------------------*/
 
 
