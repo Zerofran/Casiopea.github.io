@@ -189,5 +189,6 @@
 
 	<a href="../PHP/cerrar_sesion.php" class="cerrar-sesion">Cerrar Sesión</a>
 	<script type="text/javascript" src="../../JS/carrusel.js"></script>
+	<script type="text/javascript" src="../../JS/menuAmburgesa.js"></script>
 </body>
 </html>

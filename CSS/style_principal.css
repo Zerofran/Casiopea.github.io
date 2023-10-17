@@ -273,7 +273,7 @@ body{
         text-align: center; /* Centra el texto */
     }
     .menu nav ul {
-    flex-direction: column;
+        flex-direction: column;
     }
 
     .logo img {
@@ -292,7 +292,7 @@ body{
     }
 
     .bar {
-        background: #333;
+        background: rgb(0, 103, 165);
         height: 4px;
         width: 30px;
         margin: 3px 0;
@@ -303,9 +303,9 @@ body{
     .menu nav.show-menu {
         display: flex;
         flex-direction: column;
-        background: #333;
+        background: rgba(225, 225, 225, 0.9);
         position: absolute;
-        top: 70px;
+        top: 145px;
         left: 0;
         width: 100%;
         text-align: center;
@@ -325,46 +325,54 @@ body{
 
 /* Estilos CSS para el footer */
 .footer {
-    background-color: rgb(0, 103, 165);
+    background-color: #333; /* Cambia esto al color de fondo que desees */
+    color: white; /* Cambia esto al color del texto que desees */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
     padding: 20px;
-    text-align: center;
-    color: white;
 }
 
-.footer img{
-    padding-top: 50px;
-    width: 200px;
-    display: inline;
-    float: left;
-    margin-left: 40px;
+.imagotipo {
+    order: 1;
 }
 
-.footer p {
-    display: block;
-    text-align: left;
-    color: white;
-    padding-top: 150px;
-    padding-bottom: 100px;
-    padding-left: 60px;
+.imagotipo img {
+    width: 100px; /* Establece el ancho del imagotipo según tus necesidades */
+    height: auto; /* Permite que la altura se ajuste automáticamente para mantener la proporción */
+    max-width: 100%; /* Evita que el imagotipo se haga más grande que su tamaño original */
 }
 
 .social-icons {
-    display: inline;
-    float: right;
-    margin-right: 40px;
+    order: 3;
+    display: flex;
+    gap: 10px;
 }
 
-.social-icons img{
-    width: 50px;
-    margin-left: 5px;
-    margin-right: 5px;
+.location-text {
+    order: 2;
+    text-align: center;
 }
 
-footer a{
+.copyright,
+.menu {
+    order: 4;
+    text-align: center;
+}
+
+/* Estilos para los iconos de redes sociales */
+.social-icons img {
+    width: 30px; /* Ajusta el tamaño de los iconos según tus necesidades */
+    height: auto;
+}
+
+/* Estilos para los enlaces del menú */
+.menu a {
     color: white;
+    text-decoration: none;
+    margin: 0 10px;
 }
-/* Aqui termina el bloque del footer */
-
 
 /*-------------------------*/
 

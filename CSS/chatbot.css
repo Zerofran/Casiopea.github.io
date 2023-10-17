@@ -247,7 +247,7 @@ body{
         text-align: center; /* Centra el texto */
     }
     .menu nav ul {
-    flex-direction: column;
+        flex-direction: column;
     }
 
     .logo img {
@@ -266,7 +266,7 @@ body{
     }
 
     .bar {
-        background: #333;
+        background: rgb(0, 103, 165);
         height: 4px;
         width: 30px;
         margin: 3px 0;
@@ -277,9 +277,9 @@ body{
     .menu nav.show-menu {
         display: flex;
         flex-direction: column;
-        background: #333;
+        background: rgba(225, 225, 225,0.9);
         position: absolute;
-        top: 70px;
+        top: 145px;
         left: 0;
         width: 100%;
         text-align: center;

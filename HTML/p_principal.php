@@ -16,7 +16,6 @@
 
  ?>
 
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -183,23 +182,29 @@
 			    <button class="btn_carrucel"id="nextBtn">Siguiente</button>
 			</div>
 		</div>
-		<!--Pie de paguina-->
+		<!--Inicio Pie de pagina-->
 		<footer class="footer">
-			<img src="../IMG/imagotipo_negativo.png" alt="Logo de la Aplicación">
-        	<div class="social-icons">
-				<a href="#" target="_blank"><img src="../IMG/Icons/Instagram.svg" alt="Instagram" /></a>
-				<a href="#" target="_blank"><img src="../IMG/Icons/Twitter.svg" alt="Twitter" /></a>
-				<a href="#" target="_blank"><img src="../IMG/Icons/Facebook.svg" alt="Facebook" /></a>
-        	</div>
-        	<p>Managua-Nicaragua <br>
-			APP Nica Destiny</p>
-        	<div class="footer-menu">
-           	 	<a href="#">Información</a> |
-            	<a href="#">Privacidad</a> |
-           		<a href="#">Cookies</a>
-        	</div>
-  	  	</footer>
+  			<div class="imagotipo"><img src="../IMG/imagotipo_negativo.png"/></div>
+  			<div class="social-icons">
+    			<img src="../IMG/Icons/Facebook.svg" alt="Facebook Icon"/>
+				<img src="../IMG/Icons/Instagram.svg" alt="Instagram Icon"/>
+				<img src="../IMG/Icons/Twitter.svg" alt="Twitter Icon"/>
+  			</div>
+  			<div class="location-text">
+    			Ubicacion <br>
+    			App Nica Destiny
+  			</div>
+  			<div class="copyright">
+   				&copy; 2023 Tu Empresa
+  			</div>
+  			<div class="menu">
+   				<a href="#">Políticas</a> |
+    			<a href="#">Privacidad</a> |
+    			<a href="#">Cookies</a>
+  			</div>
+		</footer>
 
+		<!--Final Pie de pagina-->
 	</main>
 	<a href="../PHP/cerrar_sesion.php" class="cerrar-sesion">Cerrar Sesión</a>
 	<script type="text/javascript" src="../JS/carrusel.js"></script>
