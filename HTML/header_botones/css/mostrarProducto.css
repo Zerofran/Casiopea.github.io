@@ -1,109 +1,126 @@
 @font-face {
     font-family: 'nunito';
-    src: url('../font/Nunito-Black.ttf') format('truetype');
+    src: url('../../../font/Nunito-Black.ttf') format('truetype');
     /*font-family: 'nunito', Arial, sans-serif;*/
 }
 
 @font-face {
     font-family: 'LemonMilk';
-    src: url('../font/LEMONMILK-Light.otf') format('truetype');
+    src: url('../../../font/LEMONMILK-Light.otf') format('truetype');
     /*font-family: 'LemonMilk', Helvetica, sans-serif;*/
 }
 
 *{
-	margin: 0;
-	padding: 0px;
-	box-sizing: border-box;
-	text-decoration: none;
-	font-family: 'nunito', Arial, sans-serif;
+  margin: 0;
+  padding: 0px;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'nunito', Arial, sans-serif;
 }
 
 
 header {
-    width: 100%;
-    height: 120px;
-    position: fixed;
-    z-index: 100;
-    background-color: rgba(128, 128, 128, 0.95);
-    z-index: 10;
+  width: 100%;
+  height: 120px;
+  position: fixed;
+  z-index: 100;
+  background-color: rgba(128, 128, 128, 0.9);
 }
 
 body{
-	background-color: white;
+  background-color: white;
 }
 
+.btn_axes{
+    text-decoration: underline white;
+}
+
+/* Establecer el estilo de los botones que controlan el filtro*/
+.filter-button {
+  background-color: #0074cc;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+/* Establecer el estilo del botón activo */
+.filter-button.active {
+  background-color: #0056a8;
+}
 
 .container__header {
-	max-width: 1700px;
-	height: 100%;
-	margin: auto;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 0px 20px;
+  max-width: 1700px;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
 
 }
 
 
 .logo{
-	display: flex;
-	align-items: center;
-	position: relative;
-	z-index: 1;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 1;
 }
 
 .logo img {
-	width: 200px;
+  width: 200px;
 }
 
 .menu {
-	margin-top: 10px;
-	display: flex;
-	align-items: center;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
 }
 
 .menu nav {
-	margin: 0px 20px;
+  margin: 0px 20px;
 }
 
 .menu nav ul {
-	display: flex;
+  display: flex;
 }
 
 
 .menu nav ul li {
-	list-style: none;
-	margin: 20px 20px;
+  list-style: none;
+  margin: 20px 20px;
 }
 
 
-/*--Aqui se controla los botones del envabezado--*/
-	
+/*--Aqui se controla los botones del encabezado--*/
+  
 .menu nav ul li a {
-	color: skyblue;
-	font-size: 30px;
-	position: relative;
+  color: skyblue;
+  font-size: 30px;
+  position: relative;
 }
 
 .menu nav ul li a:hover{
-	color: brown;
-	text-decoration: underline white;
+  color: brown;
+  text-decoration: underline white;
 }
 
 /*-------------------------------------------*/
 
 .menu .socialMedia {
-	margin: 0px 0px;
+  margin: 0px 0px;
 }
 
 .menu .socialMedia a {
-	margin: 0px 4px;
+  margin: 0px 4px;
 }
 
 /*--modificar la imagen de social media al color deseado cuando el maus esta sobre el*/
 .menu .socialMedia img{
-	width: 50px;
-	z-index: 2;
+  width: 50px;
+  z-index: 2;
 }
 
 .socialMedia img {
@@ -119,61 +136,59 @@ body{
 /*-----------------------------------------------------------------------------------*/
 
 .container__cover{
-	padding-top: 120px;
-	padding-bottom: 100px;
+  padding-top: 170px;
+  padding-bottom: 100px;
 }
 .cover{
-	max-width: 100%;
-	align-items: center;
+  max-width: 100%;
+  align-items: center;
 }
 
 .img_cover{
-	width: 100%;
-	height: 600px;
-	overflow: hidden;
-	display: flex;
-	align-items: center; /* Centra verticalmente */
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  display: flex;
+  align-items: center; /* Centra verticalmente */
     justify-content: center; /* Centra horizontalmente */
 }
 
 .img_cover img{
-	width: 100%;
-	height: auto;
-	object-fit: cover;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 /*Aqui se ara el estilo de los botones de Proximo destino*/
 
 .text_head{
-	margin-top: 30px;
-	margin-left: 20px;
+  margin-top: 30px;
+  margin-left: 20px;
 }
 
 /* Aplica un display grid al contenedor .content_img */
 .content_img {
-  	display: grid;
-  	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Ajusta automáticamente las columnas */
-  	gap: 8px; /* Espacio entre elementos */
-  	justify-items: center; /* Centra los elementos horizontalmente */
-  	align-items: center; /* Centra los elementos verticalmente */
-  	margin: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Ajusta automáticamente las columnas */
+    gap: 8px; /* Espacio entre elementos */
+    justify-items: center; /* Centra los elementos horizontalmente */
+    align-items: center; /* Centra los elementos verticalmente */
+    margin: 10px;
 }
 
 /* Estilo para las imágenes */
 .box_img {
-	display: flex;
-  	align-items: center; /* Centra los elementos horizontalmente */
-  	justify-content: center; /* Centra los elementos verticalmente */
-  	text-align: center; /* Centra el texto horizontalmente */
-  	margin: 5px;
+  align-items: center; /* Centra los elementos horizontalmente */
+  justify-content: center; /* Centra los elementos verticalmente */
+  text-align: center; /* Centra el texto horizontalmente */
+  margin: 5px;
 }
 
 .box_img img {
-  	border-radius: 10px; /* Aplica un borde redondeado */
-  	max-width: 100%; /* Ajusta el tamaño máximo de la imagen */
-    width: 400px; /* Ajusta el ancho según las necesidades */
-    height: 300px; /* Ajusta el alto según las necesidades */
-    object-fit: cover;
+  border-radius: 10px; /* Aplica un borde redondeado */
+  max-width: 100%; /* Ajusta el tamaño máximo de la imagen */
+  width: 400px; /* Ajusta el ancho según las necesidades */
+  height: 300px; /* Ajusta el alto según las necesidades */
 }
 
 .box_img:hover img {
@@ -182,80 +197,34 @@ body{
 }
 
 .box_img a{
-	font-size: 20px; /*aumentar el tamaño de la fuente del boton*/
+  font-size: 20px; /*aumentar el tamaño de la fuente del boton*/
 }
 
 /* Estilo para los botones */
 .btn_zona {
-	position: absolute;
-  	background-color: orange;
-  	opacity: 0.9;
-  	border-radius: 10px;
-  	padding: 5px 10px;
-  	cursor: pointer;
-}
-
-/*-------------------------------------------------------*/
-
-/* Estilos CSS para el carrusel */
-.carousel-container {
-    position: relative;
-    width: 80%; /* Ajusta el ancho según tus necesidades */
-    margin: 0 auto;
-    overflow: hidden;
-}
-
-.carousel {
-	display: flex;
-	flex-direction: row;
-    transition: transform 0.5s ease;
-    align-items: flex-start;
-}
-
-
-.carousel li {
-	list-style: none;
-    min-width: 33.33%; /* Cada elemento ocupa el 100% del contenedor */
-    margin: 0px; /* Espacio entre imágenes*/
-    padding: 0;
-}
-
-/* Botones de navegación */
-.btn_carrucel {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 10px 20px;
-    border: none;
+  position: absolute;
+    background-color: orange;
+    opacity: 0.9;
+    border-radius: 10px;
+    padding: 5px 10px;
     cursor: pointer;
-}
-#prevBtn {
-    left: -10px;
-    z-index: 5;
-}
-
-#nextBtn {
-    right: -10px;
-    z-index: 5;
 }
 
 footer{
-	padding-top: 0px;
-	padding: 200px;
-	text-align: center;
-	color: green;
-	background-color: blue;
-	margin-top: 0px;
+  padding-top: 0px;
+  padding: 200px;
+  text-align: center;
+  color: green;
+  background-color: blue;
+  margin-top: 0px;
 }
 
 footer h1{
-	color: white;
+  color: white;
 }
 
 footer h2{
-	color: white;
+  color: white;
 }
 
 
@@ -344,13 +313,7 @@ footer h2{
     }
 }
 
-
-
-
 /*-------------------------*/
-
-
-
 .cerrar-sesion {
     position: fixed;
     bottom: 10px; /* Ajusta la distancia desde el borde inferior */
@@ -384,3 +347,62 @@ PD:Las imagenes usadas son muy pesadas hay que vajarles la resolcion manualmente
 --COMENTARIO NUMERO 3--
 
 */
+
+/*Estan feos yo se pero asi que quede luego los corrijo*/
+/* Estilo para el título "Filtro de Hoteles" */
+h1 {
+    font-family: 'LemonMilk', sans-serif;
+    text-align: center;
+    font-size: 36px; /* Tamaño del título */
+    color: #0C60A5; /* Color Azul Persa Medio */
+    margin-bottom: 20px;
+}
+
+/* Estilo para las etiquetas y controles de entrada */
+label {
+    display: block;
+    font-size: 20px; /* Tamaño de fuente para etiquetas */
+    margin-top: 10px;
+    color: #5AAEF3; /* Color Blue Jeans */
+}
+
+select, input[type="number"], input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    background: #F59F59; /* Color Sandy Brown */
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+}
+
+/* Estilo para los botones de filtro */
+#filter-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+}
+
+.button-container button {
+    background-color: #5AAEF3; /* Color Blue Jeans */
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.button-container button.active {
+    background-color: #0C60A5; /* Color Azul Persa Medio */
+}
+
+/* Hover sobre los botones de filtro */
+.button-container button:hover {
+    background-color: #F59F59; /* Color Sandy Brown */
+}

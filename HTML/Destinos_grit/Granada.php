@@ -1,19 +1,5 @@
 <?php 
-
-	session_start();
-
-	if (!isset($_SESSION['usuario'])) {
-		echo '
-
-			<script>
-				alert("Por favor debes inciar sesion")
-				window.location = "../index.php"
-			</script>
-		';
-		session_destroy();
-		die();
-	}
-
+include '../../PHP/verificarRol_be.php';
  ?>
 
 <!DOCTYPE html>
@@ -38,11 +24,19 @@
 				</a>
 			</div>
 
+	        <!-- Agregar aquí el botón de menú hamburguesa -->
+	        <div class="menu-toggle">
+	            <div class="bar"></div>
+	            <div class="bar"></div>
+	            <div class="bar"></div>
+	        </div>
+	        <!-- Fin del botón de menú hamburguesa -->
+
 			<div class="menu"> 
 				<!-- class="btn_axes" para los botones subrayados-->
 				<nav>
 					<ul>
-						<li><a href="../Bontones/Hoteles.php">Hoteles</a></li>
+						<li><a href="../header_botones/hoteles/mostrar_producto.php">Hoteles</a></li>
 						<li><a href="#">Restaurantes</a></li>
 						<li><a href="#">Gastronomía</a></li>
 						<li><a href="#">rutas</a></li>
@@ -50,7 +44,7 @@
 				</nav>
 
 				<div class="socialMedia">
-					<a href="#">
+					<a href="../admin/perfil.php">
 						<img src="../../IMG/user.png" alt="">
 					</a>
 				</div>
@@ -89,5 +83,6 @@
 		</footer>
 	</main>
 	<a href="../PHP/cerrar_sesion.php" class="cerrar-sesion">Cerrar Sesión</a>
+	<script type="text/javascript" src="../../JS/menuAmburgesa.js"></script>
 </body>
 </html>

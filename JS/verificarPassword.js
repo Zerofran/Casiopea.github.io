@@ -1,6 +1,6 @@
 // Esta función se ejecutará cuando el usuario ingrese algo en el campo de correo en el formulario de inicio de sesión.
 function validarCorreoLogin(correoInput) {
-    var correoValido = /^[\p{L}0-9._%+\-\p{L}]+@(gmail|hotmail|yahoo)\.(com|net|ni|es|edu\.ni|uk|ca|jp|ru|au|br|de|fr|gov|int|mil|org|cn)$/u;
+    var correoValido = /^[\p{L}0-9._%+\-\p{L}]+@(gmail|hotmail)\.(com|net|ni|es|edu\.ni|uk|ca|jp|ru|au|br|de|fr|gov|int|mil|org|cn)$/u;
     var estadoCorreo = correoInput.parentElement.querySelector(".estado-correo-login");
     var botonLogin = document.getElementById("login-button");
 
@@ -25,7 +25,7 @@ function validarCorreoLogin(correoInput) {
 
 
 function validarCorreoRegistro(correoInput) {
-    var correoValido = /^[\p{L}0-9._%+\-\p{L}]+@(gmail|hotmail|yahoo)\.(com|net|ni|es|edu\.ni|uk|ca|jp|ru|au|br|de|fr|gov|int|mil|org|cn)$/u;
+    var correoValido = /^[\p{L}0-9._%+\-\p{L}]+@(gmail|hotmail)\.(com|net|ni|es|edu\.ni|uk|ca|jp|ru|au|br|de|fr|gov|int|mil|org|cn)$/u;
     var estadoCorreo = correoInput.parentElement.querySelector(".estado-correo-registro");
     var botonRegistro = document.getElementById("registro-button");
 
