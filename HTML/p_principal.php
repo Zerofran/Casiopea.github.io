@@ -14,7 +14,7 @@
 		die();
 	}
 
- ?>
+?>
 
 
 <!DOCTYPE html>
@@ -50,11 +50,10 @@
 			<div class="menu"> 
 				<nav>
 					<ul>
-						<li><a href="Bontones/chatbot.php">Preguntame!</a></li>
-						<li><a href="Bontones/Hoteles.php">Hoteles</a></li>
+						<li><a href="header_botones/hoteles/mostrar_producto.php">Hoteles</a></li>
 						<li><a href="#">Restaurantes</a></li>
 						<li><a href="#">Gastronomía</a></li>
-						<li><a href="#">Rutas</a></li>
+						<li><a href="#">rutas</a></li>
 					</ul>
 				</nav>
 				
@@ -82,54 +81,66 @@
 			<!--En esta zona se deben de mostrar los distintos lugares de destino-->
 			<div class="text_head"><h1>Elige tu próximo destino</h1></div>
 			<div class="content_img">
-				<div class="box_img">
-					<img src="../IMG/img2.png" alt="">
-					<a href="Destinos_grit/Granada.php" class="btn_zona">Granada</a>
-				</div>
-				<div class="box_img">
-					<img src="../IMG/img2.png" alt="">
-					<a href="#" class="btn_zona">León</a>
-				</div>
-				<div class="box_img">
-					<img src="../IMG/img2.png" alt="">
-					<a href="#" class="btn_zona">Masaya</a>
-				</div>
-				<div class="box_img">
-					<img src="../IMG/img2.png" alt="">
-					<a href="#" class="btn_zona">Rivas</a>
-				</div>
-				<div class="box_img">
-					<img src="../IMG/img2.png" alt="">
-					<a href="#" class="btn_zona">Matagalpa</a>
-				</div>
-				<div class="box_img">
-					<img src="../IMG/img2.png" alt="">
-					<a href="#" class="btn_zona">Managua</a>
-				</div>
-				<div class="box_img">
-					<img src="../IMG/img2.png" alt="">
-					<a href="#" class="btn_zona">jinotega</a>
-				</div>
-				<div class="box_img">
-					<img src="../IMG/img2.png" alt="">
-					<a href="#" class="btn_zona">Boaco</a>
-				</div>
-				<div class="box_img">
-					<img src="../IMG/img2.png" alt="">
-					<a href="#" class="btn_zona">Estelí</a>
-				</div>
-				<div class="box_img">
-					<img src="../IMG/img2.png" alt="">
-					<a href="#" class="btn_zona">Río San Juan</a>
-				</div>
-				<div class="box_img">
-					<img src="../IMG/img2.png" alt="">
-					<a href="#" class="btn_zona">Carazo</a>
-				</div>
-				<div class="box_img">
-					<img src="../IMG/img2.png" alt="">
-					<a href="#" class="btn_zona">Chinandega</a>
-				</div>
+			    <div class="box_img">
+			        <img src="../IMG/img1.png" alt="Boaco">
+			        <a href="Destinos_grit/Boaco.php" class="btn_zona">Boaco</a>
+			    </div>
+			    <div class="box_img">
+			        <img src="../IMG/img2.png" alt="Carazo">
+			        <a href="Destinos_grit/Carazo.php" class="btn_zona">Carazo</a>
+			    </div>
+			    <div class="box_img">
+			        <img src="../IMG/img3.png" alt="Chinandega">
+			        <a href="Destinos_grit/Chinandega.php" class="btn_zona">Chinandega</a>
+			    </div>
+			    <div class="box_img">
+			        <img src="../IMG/img1.png" alt="Chontales">
+			        <a href="Destinos_grit/Chontales.php" class="btn_zona">Chontales</a>
+			    </div>
+			    <div class="box_img">
+			        <img src="../IMG/img2.png" alt="Estelí">
+			        <a href="Destinos_grit/Estelí.php" class="btn_zona">Estelí</a>
+			    </div>
+			    <div class="box_img">
+			        <img src="../IMG/img3.png" alt="Granada">
+			        <a href="Destinos_grit/Granada.php" class="btn_zona">Granada</a>
+			    </div>
+			    <div class="box_img">
+			        <img src="../IMG/img1.png" alt="Jinotega">
+			        <a href="Destinos_grit/Jinotega.php" class="btn_zona">Jinotega</a>
+			    </div>
+			    <div class="box_img">
+			        <img src="../IMG/img2.png" alt="León">
+			        <a href="Destinos_grit/León.php" class="btn_zona">León</a>
+			    </div>
+			    <div class="box_img">
+			        <img src="../IMG/img3.png" alt="Madriz">
+			        <a href="Destinos_grit/Madriz.php" class="btn_zona">Madriz</a>
+			    </div>
+			    <div class="box_img">
+			        <img src="../IMG/img1.png" alt="Managua">
+			        <a href="Destinos_grit/Managua.php" class="btn_zona">Managua</a>
+			    </div>
+			    <div class="box_img">
+			        <img src="../IMG/img2.png" alt="Masaya">
+			        <a href="Destinos_grit/Masaya.php" class="btn_zona">Masaya</a>
+			    </div>
+			    <div class="box_img">
+			        <img src="../IMG/img3.png" alt="Matagalpa">
+			        <a href="Destinos_grit/Matagalpa.php" class="btn_zona">Matagalpa</a>
+			    </div>
+			    <div class="box_img">
+			        <img src="../IMG/img1.png" alt="Nueva Segovia">
+			        <a href="Destinos_grit/Nueva_Segovia.php" class="btn_zona">Nueva Segovia</a>
+			    </div>
+			    <div class="box_img">
+			        <img src="../IMG/img2.png" alt="Río San Juan">
+			        <a href="Destinos_grit/Río_San_Juan.php" class="btn_zona">Río San Juan</a>
+			    </div>
+			    <div class="box_img">
+			        <img src="../IMG/img3.png" alt="Rivas">
+			        <a href="Destinos_grit/Rivas.php" class="btn_zona">Rivas</a>
+			    </div>
 			</div>
 
 			<!--carrucel de destinos recomendados segun el viaje-->
