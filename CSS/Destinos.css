@@ -1,0 +1,341 @@
+@font-face {
+    font-family: 'nunito';
+    src: url('../font/Nunito-Black.ttf') format('truetype');
+    /*font-family: 'nunito', Arial, sans-serif;*/
+}
+
+@font-face {
+    font-family: 'LemonMilk';
+    src: url('../font/LEMONMILK-Light.otf') format('truetype');
+    /*font-family: 'LemonMilk', Helvetica, sans-serif;*/
+}
+
+*{
+	margin: 0;
+	padding: 0px;
+	box-sizing: border-box;
+	text-decoration: none;
+	font-family: 'nunito', Arial, sans-serif;
+}
+
+header {
+    width: 100%;
+    height: 120px;
+    position: fixed;
+    z-index: 100;
+    background-color: rgba(128, 128, 128, 0.9);
+}
+
+body{
+  /* La imagen colocada es un placeolder ya que no tengo un fondo listo para usar*/
+  background-image: url(../IMG/img11.JPG);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+body:before {
+  content: "";
+  width: 100%;
+  min-height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /*background: linear-gradient(to bottom, orange, skyblue); */
+  backdrop-filter: blur(50px);
+  opacity: 0.7;
+  z-index: -1;
+}
+
+.container__header {
+	max-width: 1700px;
+	height: 100%;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0px 20px;
+
+}
+
+.logo{
+	display: flex;
+	align-items: center;
+	position: relative;
+	z-index: 1;
+}
+
+.logo img {
+	width: 200px;
+}
+
+.menu {
+	margin-top: 10px;
+	display: flex;
+	align-items: center;
+}
+
+.menu nav {
+	margin: 0px 20px;
+}
+
+.menu nav ul {
+	display: flex;
+}
+
+
+.menu nav ul li {
+	list-style: none;
+	margin: 20px 20px;
+}
+
+
+/*--Aqui se controla los botones del encabezado--*/
+	
+.menu nav ul li a {
+	color: skyblue;
+	font-size: 30px;
+	position: relative;
+}
+
+.menu nav ul li a:hover{
+	color: brown;
+	text-decoration: underline white;
+}
+
+.btn_axes{
+	text-decoration: underline white;
+}
+
+/*-------------------------------------------*/
+
+.menu .socialMedia {
+	margin: 0px 0px;
+}
+
+.menu .socialMedia a {
+	margin: 0px 4px;
+}
+
+/*--modificar la imagen de social media al color deseado cuando el maus esta sobre el*/
+.menu .socialMedia img{
+	width: 50px;
+	z-index: 2;
+}
+
+.socialMedia img {
+    filter: grayscale(100%); /* Convierte la imagen en blanco y negro */
+    transition: filter 0.5s ease; /* Aplica una transición suave */
+    text-decoration: none;
+}
+
+.socialMedia:hover img {
+    filter: hue-rotate(180deg); /* Cambia el color a azul al pasar el ratón */
+    text-decoration: underline;
+}
+/*-----------------------------------------------------------------------------------*/
+
+.container__cover{
+	padding-top: 160px;
+	padding-bottom: 100px;
+}
+
+.titulo h1{
+	border-radius: 10px;
+	background-color: orange; /* Color de fondo gris */
+	padding: 10px; /* Relleno para el espacio alrededor del texto */
+	text-align: center; /* Centra el texto horizontalmente */
+	margin: 5px; /* Espacio entre el texto y los bordes del div */
+	max-width: 400px; /* Ancho máximo para el div (ajusta según tus necesidades) */
+	margin: 0 auto; /* Centra el div horizontalmente en la página */
+}
+
+/* En tu archivo CSS Destinos.css */
+.cover {
+  display: flex; /* Utilizamos display: flex para alinear los elementos horizontalmente */
+  justify-content: center; /* Centra los elementos horizontalmente */
+  align-items: center; /* Centra los elementos verticalmente */
+}
+
+.btn_cover1 {
+  text-align: center; /* Centra el contenido dentro de la primera sección */
+  padding-top: 10px;
+}
+
+.btn_cover1 div {
+  background-color: #ccc; /* Color de fondo gris */
+  padding: 35px 10px; /* Relleno para el espacio alrededor del texto */
+  text-align: center; /* Centra el texto horizontalmente */
+  margin: 20px; /* Espacio entre los divs */
+  border-radius: 10px;
+}
+
+.btn_cover2 {
+  display: flex;
+  flex-direction: column; /* Coloca los elementos de la segunda sección en una columna */
+  align-items: center; /* Centra los elementos verticalmente dentro de la segunda sección */
+  margin-left: 200px; /* Espacio entre las dos secciones, puedes ajustarlo según tus preferencias */
+}
+
+/* Estilos adicionales según tu preferencia */
+.btn_cover2 a {
+  text-decoration: none;
+  padding: 10px 20px; /* Ajusta el relleno para igualar el espacio en la parte superior e inferior, con 0 en los lados */
+  color: white;
+  background-color: skyblue;
+  border-radius: 10px;
+  margin: 5px 0;
+  width: 100%; /* Añade esto para que los botones se expandan horizontalmente */
+  text-align: center; /* Añade esto para centrar el texto horizontalmente */
+}
+
+
+
+
+/*Aqui se ara el estilo de los botones de Proximo destino*/
+
+.text_head{
+	margin-top: 30px;
+	margin-left: 20px;
+}
+
+
+/*--SISTEMA RESPONSIVO--*/
+/* Estilos para tamaños de pantalla más grandes */
+@media (min-width: 1200px) {
+    .menu {
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+    }
+
+    .logo img {
+        max-width: 200px; /* Ajusta el tamaño máximo del logotipo */
+    }
+
+    .menu nav {
+        margin: 0px 20px;
+    }
+
+    .menu nav ul li {
+        margin: 20px 20px;
+    }
+
+    .menu nav ul li a {
+        font-size: 30px;
+    }
+
+    /* Otros estilos específicos para tamaños de pantalla más grandes */
+}
+
+
+/* Estilos para tamaños de pantalla más pequeños (menú hamburguesa) */
+@media (max-width: 1200px) {
+    .menu {
+        flex-direction: column; /* Coloca los elementos en columna */
+        text-align: center; /* Centra el texto */
+    }
+    .menu nav ul {
+    flex-direction: column;
+    }
+
+    .logo img {
+        max-width: 200px; /* Ajusta el tamaño máximo del logotipo */
+    }
+
+    .menu nav {
+        display: none; /* Oculta el menú de navegación */
+    }
+
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        padding: 10px;
+    }
+
+    .bar {
+        background: #333;
+        height: 4px;
+        width: 30px;
+        margin: 3px 0;
+        transition: 0.4s;
+    }
+
+    /* Estilos para mostrar el menú desplegable */
+    .menu nav.show-menu {
+        display: flex;
+        flex-direction: column;
+        background: #333;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        z-index: 1;
+    }
+
+    .menu nav.show-menu ul {
+        padding: 20px;
+    }
+
+    .menu nav.show-menu ul li {
+        list-style: none;
+        margin: 10px 0;
+    }
+}
+/*-------------------------*/
+
+
+
+footer{
+    padding-top: 0px;
+    padding: 200px;
+    text-align: center;
+    color: green;
+    background-color: blue;
+    margin-top: 0px;
+}
+
+footer h1{
+    color: white;
+}
+
+footer h2{
+    color: white;
+}
+
+.cerrar-sesion {
+    position: fixed;
+    bottom: 10px; /* Ajusta la distancia desde el borde inferior */
+    left: 10px; /* Ajusta la distancia desde el borde izquierdo */
+    background-color: red; /* Cambia el color de fondo */
+    color: white; /* Cambia el color del texto */
+    padding: 10px 20px; /* Ajusta el relleno */
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 200; /* Asegura que el botón esté sobre otros elementos */
+}
+
+.cerrar-sesion:hover {
+    background-color: darkred; /* Cambia el color de fondo al pasar el cursor sobre el botón */
+}
+
+
+/*----NOTAS PARA EL QUE REVISE MI CODIGO Y PARA MI----
+
+Reciclar el css ahorra mucho tiempo pero siempre se me van cosas repetidas
+copie el anterior css por que requiero agretgar unos estilos extra sin afectar
+el estilo de el loby principal.
+                                          
+                                          --ATTM: Francisco josue--
+
+PD:guardad el css y recargar cuando no se aplique correctamente y si no funciona poner un
+   nombre diferente y llamarlo correctamente en el html
+PD:Las imagenes usadas son muy pesadas hay que vajarles la resolcion manualmente 3k es demaciado
+
+--COMENTARIO NUMERO 4--
+huy estoy aprendiendo mucho con esto, aunque estoy reconsiderando usar firebase...
+*/
