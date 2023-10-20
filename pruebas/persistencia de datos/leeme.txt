@@ -1,0 +1,2 @@
+Esta es la prueba de persistencia de atos, util para la web
+toca readaptarla par poder guardar coordenadas

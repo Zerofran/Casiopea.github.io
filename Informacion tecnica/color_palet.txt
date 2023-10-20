@@ -1,0 +1,3 @@
+Azul persa medio   hexadecimal  #0C60A5   RGB 0, 103, 165
+Blue jeans  hexadecimal  #5AAEF3   RGB 90, 174, 243
+Sandy Brown hexadecimal  #F59F59   RGB 243, 159, 90
