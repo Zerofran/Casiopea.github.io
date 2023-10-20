@@ -1,17 +1,11 @@
 //---ESTE SCRIPT AYUDA A CONTROLAR EL SISTEMA RESPONSIVO Y DE LOGIN---//
 //---COMPROBANDO EVENTOS---//
-window.addEventListener("DOMContentLoaded", function () {
-    window.addEventListener('resize', anchoPagina);
-    document.getElementById("btn__registrarse").addEventListener("click", registro);
-    document.getElementById("btn__iniciar-sesion").addEventListener("click", login);
-    window.addEventListener("load", anchoPagina);
-    window.addEventListener("beforeunload", anchoPagina);
-});
+window.addEventListener('resize', anchoPagina);
+document.getElementById("btn__registrarse").addEventListener("click", registro);
+document.getElementById("btn__iniciar-sesion").addEventListener("click", login);
+window.addEventListener("load", anchoPagina);
+window.addEventListener("beforeunload", anchoPagina);
 
-document.addEventListener('DOMContentLoaded', function () {
-    anchoPagina();
-    window.addEventListener('resize', anchoPagina);
-});
 //-------------------------------------------------------------------------//
 
 //----DECLARACIÓN DE VARIABLES----//
@@ -29,7 +23,6 @@ var estado = 0;
 // Todas retornan un void//
 
 function anchoPagina() {
-     console.log("funciona")
     if (window.innerWidth > 850) {
         caja_trasera_login.style.display = "block";
         caja_trasera_registro.style.display = "block";
@@ -43,13 +36,11 @@ function anchoPagina() {
         contenedor_login_registro.style.left = "0px";
     }
 }
-function anchoPagina()
 
 //xxxxxxxxxxxxxxxxxxxxxxxxxxxxx//
 
 //--FUNCION DE CONTROL DE LOGIN--//
 function login() {
-
     if (window.innerWidth > 850) {
         formulario_registro.style.display = "none";
         contenedor_login_registro.style.left = "10px";
