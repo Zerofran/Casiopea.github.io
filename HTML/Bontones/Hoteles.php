@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 
 <?php 
 /*
+=======
+<?php 
+
+>>>>>>> 9eeda649c777f0ed730aeb777882743a06071fec
 	session_start();
 
 	if (!isset($_SESSION['usuario'])) {
@@ -14,9 +19,14 @@
 		session_destroy();
 		die();
 	}
+<<<<<<< HEAD
 */
  ?>
 
+=======
+
+ ?>
+>>>>>>> 9eeda649c777f0ed730aeb777882743a06071fec
 
 <!DOCTYPE html>
 <html>

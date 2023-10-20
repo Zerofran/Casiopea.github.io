@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 //Verificando el rol de ususario y revisar que secio esta abierta
 include '../PHP/verificarRol_be.php';
@@ -8,6 +9,30 @@ include '../PHP/verificarRol_be.php';
 <html>
 <head>
 
+=======
+<?php 
+
+	session_start();
+
+	if (!isset($_SESSION['usuario'])) {
+		echo '
+
+			<script>
+				alert("Por favor debes inciar sesion")
+				window.location = "../index.php"
+			</script>
+		';
+		session_destroy();
+		die();
+	}
+
+?>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+>>>>>>> 9eeda649c777f0ed730aeb777882743a06071fec
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Pagina principal</title>
@@ -17,8 +42,13 @@ include '../PHP/verificarRol_be.php';
 
 </head>
 <body>
+<<<<<<< HEAD
 
 	<!--HEADER - MENU-->
+=======
+	<!--HEADER - MENU-->
+
+>>>>>>> 9eeda649c777f0ed730aeb777882743a06071fec
 	<header>
 		<div class="container__header">
 			<div class="logo">
@@ -46,11 +76,19 @@ include '../PHP/verificarRol_be.php';
 				</nav>
 				
 				<div class="socialMedia">
+<<<<<<< HEAD
 					<a href="admin/ajustes.php">
+=======
+					<a href="#">
+>>>>>>> 9eeda649c777f0ed730aeb777882743a06071fec
 						<img src="../IMG/user.png" alt="">
 					</a>
 				</div>
 			</div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 9eeda649c777f0ed730aeb777882743a06071fec
 		</div>
 	</header>
 
@@ -61,7 +99,11 @@ include '../PHP/verificarRol_be.php';
 		<div class="container__cover div__offset">
 			<div class="cover">
 				<section class="img_cover">
+<<<<<<< HEAD
 					<img src="../IMG/img8.jpg" alt="">
+=======
+					<img src="../IMG/img7.jpg" alt="">
+>>>>>>> 9eeda649c777f0ed730aeb777882743a06071fec
 				</section>
 			</div>
 
@@ -178,7 +220,11 @@ include '../PHP/verificarRol_be.php';
 			</div>
 		</div>
 		<!--Pie de paguina-->
+<<<<<<< HEAD
 		<footer class="piePagina">
+=======
+		<footer>
+>>>>>>> 9eeda649c777f0ed730aeb777882743a06071fec
 			<h1>Este es el pie de paguina</h1>
 			<h2>Lorem Impush</h2>
 		</footer>
@@ -187,6 +233,7 @@ include '../PHP/verificarRol_be.php';
 	<a href="../PHP/cerrar_sesion.php" class="cerrar-sesion">Cerrar Sesión</a>
 	<script type="text/javascript" src="../JS/carrusel.js"></script>
 	<script type="text/javascript" src="../JS/menuAmburgesa.js"></script>
+<<<<<<< HEAD
 
 	<script type="text/javascript">
 	  // En cualquier otro script en la misma página
@@ -206,5 +253,7 @@ include '../PHP/verificarRol_be.php';
 	    // Puedes realizar acciones que dependan de cargo aquí
 	  });
 	</script>
+=======
+>>>>>>> 9eeda649c777f0ed730aeb777882743a06071fec
 </body>
 </html>

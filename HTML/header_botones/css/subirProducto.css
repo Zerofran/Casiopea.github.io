@@ -87,7 +87,11 @@ select:focus {
 
 /* Estilo para el campo de selección de archivo destacado */
 input[type="file"] {
+<<<<<<< HEAD
     width: 97%;
+=======
+    width: 100%;
+>>>>>>> 9eeda649c777f0ed730aeb777882743a06071fec
     padding: 10px;
     margin-top: 20px; /* Mayor margen para separarlo del resto de los campos */
     border: 2px solid #F59F59; /* Un borde más destacado */

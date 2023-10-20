@@ -1,6 +1,25 @@
+<<<<<<< HEAD
 <?php
 //Verificando el rol de ususario y revisar que secio esta abierta
 include '../../../PHP/verificarRol_be.php';
+=======
+<?php 
+
+    session_start();
+
+    if (!isset($_SESSION['usuario'])) {
+        echo '
+
+            <script>
+                alert("Por favor debes inciar sesion")
+                window.location = "../index.php"
+            </script>
+        ';
+        session_destroy();
+        die();
+    }
+
+>>>>>>> 9eeda649c777f0ed730aeb777882743a06071fec
 ?>
 
 <!DOCTYPE html>
@@ -41,7 +60,11 @@ include '../../../PHP/verificarRol_be.php';
                 </nav>
                 
                 <div class="socialMedia">
+<<<<<<< HEAD
                     <a href="../../admin/perfil.php">
+=======
+                    <a href="#">
+>>>>>>> 9eeda649c777f0ed730aeb777882743a06071fec
                         <img src="../../../IMG/user.png" alt="">
                     </a>
                 </div>

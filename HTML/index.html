@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <html>
 <head>
   <meta charset="utf-8">
@@ -138,3 +139,76 @@
 </html>
 
 -->
+=======
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mapa de Ubicacion en Tiempo Real</title>
+  <link rel="stylesheet" href="https://js.arcgis.com/4.24/esri/themes/light/main.css">
+  <script src="https://js.arcgis.com/4.24/"></script>
+  <style>
+    #viewDiv {
+      height: 400px;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div id="viewDiv"></div>
+  <script>
+    require([
+      "esri/Map",
+      "esri/views/MapView",
+      "esri/layers/FeatureLayer",
+      "esri/tasks/Locator",
+      "esri/symbols/SimpleMarkerSymbol",
+      "esri/geometry/Point",
+      "esri/Graphic"
+    ], function (Map, MapView, FeatureLayer, Locator, SimpleMarkerSymbol, Point, Graphic) {
+      var map = new Map({
+        basemap: "streets-navigation-vector"
+      });
+
+      var view = new MapView({
+        container: "viewDiv",
+        map: map,
+        zoom: 12 // Nivel de zoom
+      });
+
+      // Crear un símbolo para la ubicación en tiempo real
+      var markerSymbol = new SimpleMarkerSymbol({
+        color: [226, 119, 40],
+        outline: {
+          color: [255, 255, 255],
+          width: 2
+        }
+      });
+
+      // Habilitar la geolocalización del navegador
+      if ("geolocation" in navigator) {
+        navigator.geolocation.watchPosition(function (position) {
+          var latitude = position.coords.latitude;
+          var longitude = position.coords.longitude;
+
+          // Crear un punto con las coordenadas de geolocalización
+          var point = new Point({
+            longitude: longitude,
+            latitude: latitude
+          });
+
+          // Crear un marcador gráfico en la ubicación en tiempo real
+          var graphic = new Graphic({
+            geometry: point,
+            symbol: markerSymbol
+          });
+
+          // Añadir el marcador al mapa
+          view.graphics.removeAll(); // Limpiar marcadores anteriores
+          view.graphics.add(graphic);
+        });
+      }
+    });
+  </script>
+</body>
+</html>
+>>>>>>> 9eeda649c777f0ed730aeb777882743a06071fec
