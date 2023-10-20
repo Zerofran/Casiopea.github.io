@@ -26,36 +26,38 @@
 </head>
 <body>
     <h1>Subir Producto</h1>
-    <form action="subir_producto_be.php" method="post" enctype="multipart/form-data">
-        <label for="nombre">Nombre del Producto:</label>
-        <input type="text" name="nombre" required><br>
+    <div>
+        <form action="subir_producto_be.php" method="post" enctype="multipart/form-data">
+            <label for="nombre">Nombre del Producto:</label>
+            <input type="text" name="nombre" required><br>
 
-        <label for="descripcion">Descripción:</label>
-        <textarea name="descripcion" required></textarea><br>
+            <label for="descripcion">Descripción:</label>
+            <textarea name="descripcion" required></textarea><br>
 
-        <label for="precio">Precio:</label>
-        <input type="number" name="precio" required><br>
+            <label for="precio">Precio:</label>
+            <input type="number" name="precio" required><br>
 
-        <label for="moneda">Moneda:</label>
-        <select name="moneda">
-            <option value="cordoba">Córdoba Nicaragüense (NIO)</option>
-            <option value="dollar">Dólar Estadounidense (USD)</option>
-            <option value="euro">Euro (EUR)</option>
-            <!-- Agrega más monedas según sea necesario -->
-        </select><br>
+            <label for="moneda">Moneda:</label>
+            <select name="moneda">
+                <option value="cordoba">Córdoba Nicaragüense (NIO)</option>
+                <option value="dollar">Dólar Estadounidense (USD)</option>
+                <option value="euro">Euro (EUR)</option>
+                <!-- Agrega más monedas según sea necesario -->
+            </select><br>
 
-        <label for="imagen">Imagen del Producto:</label>
-        <input type="file" name="imagen" accept="image/*" required><br>
+            <label for="imagen">Imagen del Producto:</label>
+            <input type="file" name="imagen" accept="image/*" required><br>
 
-        <label for="tags">Tags:</label><br>
-        <input type="checkbox" name="tags[]" value="campo"> Campo <br>
-        <input type="checkbox" name="tags[]" value="volcan"> Volcán <br>
-        <input type="checkbox" name="tags[]" value="ciudad"> Ciudad <br>
-        <!-- Agrega más tags con sus checkboxes según sea necesario -->
+            <label for="tags">Tags:</label><br>
+            <input type="checkbox" name="tags[]" value="campo"> Campo <br>
+            <input type="checkbox" name="tags[]" value="volcan"> Volcán <br>
+            <input type="checkbox" name="tags[]" value="ciudad"> Ciudad <br>
+            <!-- Agrega más tags con sus checkboxes según sea necesario -->
 
-        <!-- Puedes agregar más campos aquí según tus necesidades, como condición, marca, etc. -->
+            <!-- Puedes agregar más campos aquí según tus necesidades, como condición, marca, etc. -->
 
-        <input type="submit" value="Subir Producto">
-    </form>
+            <input type="submit" value="Subir Producto">
+        </form>
+    </div>
 </body>
 </html>

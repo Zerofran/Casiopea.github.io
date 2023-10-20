@@ -1,6 +1,7 @@
 <?php
 //Verificando el rol de ususario y revisar que secio esta abierta
 include '../PHP/verificarRol_be.php';
+
 ?>
 
 <!DOCTYPE html>
@@ -45,7 +46,7 @@ include '../PHP/verificarRol_be.php';
 				</nav>
 				
 				<div class="socialMedia">
-					<a href="admin/perfil.php">
+					<a href="admin/ajustes.php">
 						<img src="../IMG/user.png" alt="">
 					</a>
 				</div>

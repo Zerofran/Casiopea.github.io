@@ -1,6 +1,6 @@
 //---ESTE SCRIPT AYUDA A CONTROLAR EL SISTEMA RESPONSIVO Y DE LOGIN---//
-
 //---COMPROBANDO EVENTOS---//
+window.addEventListener('resize', anchoPagina);
 document.getElementById("btn__registrarse").addEventListener("click", registro);
 document.getElementById("btn__iniciar-sesion").addEventListener("click", login);
 window.addEventListener("load", anchoPagina);
@@ -23,10 +23,10 @@ var estado = 0;
 // Todas retornan un void//
 
 function anchoPagina() {
-    if (window.innerWidth > 840) {
+    if (window.innerWidth > 850) {
         caja_trasera_login.style.display = "block";
         caja_trasera_registro.style.display = "block";
-        //contenedor_login_registro.style.left = "10px";//
+        contenedor_login_registro.style.left = "10px";
     } else {
         caja_trasera_registro.style.display = "block";
         caja_trasera_registro.style.opacity = "1";
@@ -41,9 +41,7 @@ function anchoPagina() {
 
 //--FUNCION DE CONTROL DE LOGIN--//
 function login() {
-
-    if (window.innerWidth > 840) {
-
+    if (window.innerWidth > 850) {
         formulario_registro.style.display = "none";
         contenedor_login_registro.style.left = "10px";
         formulario_login.style.display = "block";
@@ -63,7 +61,7 @@ function login() {
 //--FUNCION DE CONTROL DE REGISTRO--//
 function registro() {
 
-    if (window.innerWidth > 840) {
+    if (window.innerWidth > 850) {
 
         formulario_registro.style.display = "block";
         contenedor_login_registro.style.left = "410px";

@@ -18,9 +18,10 @@ if (!isset($_SESSION['usuario'])) {
 if (!$conexion) {
     die('Error en la conexión a la base de datos: ' . mysqli_connect_error());
 }
+
 $correo_encriptado = $_SESSION['usuario'];
 // Realizar la consulta SQL para obtener id_cargo
-$query = "SELECT id_cargo FROM usuarios WHERE correo = '$correo_encriptado'";
+$query = "SELECT id_cargo, usuario FROM usuarios WHERE correo = '$correo_encriptado'";
 $resultado = mysqli_query($conexion, $query);
 
 if (!$resultado) {
@@ -29,11 +30,9 @@ if (!$resultado) {
     $fila = mysqli_fetch_assoc($resultado);
     if ($fila) {
         $id_cargo = $fila['id_cargo'];
+        $usuario = $fila['usuario'];
         echo "<script>window.id_cargo = $id_cargo;</script>";
-        // Ahora $id_cargo contiene el valor de id_cargo correspondiente al usuario con el correo encriptado
-        //echo "El id_cargo es: $id_cargo";
-
-        // Puedes usar $id_cargo en tu código PHP o JavaScript según tus necesidades
+        echo "<script>window.usuario = '$usuario';</script>";
     } else {
         echo 'No se encontró un usuario con el correo encriptado.';
     }

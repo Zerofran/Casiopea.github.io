@@ -39,7 +39,6 @@
 //esta es la parte que deja entrar a la web a la persona asi que verificar que no este comentada
 // Después de verificar el inicio de sesión exitoso
 	if (mysqli_num_rows($validar_login) > 0) {
-	    // Establece $_SESSION['usuario'] y $_SESSION['id_cargo']
 	    $_SESSION['usuario'] = $correo;
 	    header("location: ../HTML/p_principal.php");
 	    exit;
