@@ -17,10 +17,10 @@ body{
 }
 
 body:before {
-  /*---agregar el gradiente sobre la imagen---*/
+  /* Agregar el gradiente sobre la imagen */
   content: "";
   width: 100%;
-  min-height: 100vh;
+  min-height: 150vh; /* Aumenta este valor para cubrir más la pantalla */
   position: absolute;
   top: 0;
   left: 0;
@@ -28,6 +28,7 @@ body:before {
   opacity: 0.7;
   z-index: -1;
 }
+
 
 
 main{

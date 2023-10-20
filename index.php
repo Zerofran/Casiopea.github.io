@@ -1,3 +1,14 @@
+<?php 
+
+	session_start();
+
+	if (isset($_SESSION['usuario'])) {
+		header("location: HTML/p_principal.php");
+	}
+
+ ?>
+
+
 <!DOCTYPE html>
 <html>
 <head>

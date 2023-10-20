@@ -33,7 +33,7 @@
 
 	/*---ASIGNANDO VALORES DE VARIABLES A LA TABLA DE MySQL---*/
 	/*---abriendo la libreta---*/
-	$query = "INSERT INTO usuarios (nombre_completo, correo, usuario, contrasena) VALUES ('$nombre_completo', '$correo', '$usuario', '$contrasena')";
+	$query = "INSERT INTO usuarios (nombre_completo, correo, usuario, contrasena, id_cargo) VALUES ('$nombre_completo', '$correo', '$usuario', '$contrasena', '2')";
 
 	//----VERIFICAR QUE EL CORREO Y USUARIO NO SE REPITA----//
 	$verificar_correo = mysqli_query($conexion, "SELECT * FROM usuarios WHERE correo = '$correo' ");
@@ -94,7 +94,7 @@
 
 //----NOTAS PARA EL QUE REVISE MI CODIGO----//
 
-/*--Hola soy Fran el programador del grupo si estas leyendo mi codigo considera que soy novato en esto del sesarrollo web y no critiques tan duro mi codigo, si ves que trabajo un poco limpio y etiquetando todo con comentarios es por que apriendo los lenguajes mietras hago esto asi dijiero mejor la informacion, no soy novato del todo si notas cierto orden en los script es por que antes cree un videojuego con conocimiento  cero del motor asi que no es la primera ves que hago algo sin saber absolutamente nada 0_0, por cierto deje comentarios como estos en otros scripts este es el comentario numero 1 */
+/*--Hola soy Fran el programador del grupo si estas leyendo mi codigo considera que soy novato en esto del sesarrollo web y no critiques tan duro mi codigo, si ves que trabajo un poco limpio y etiquetando todo con comentarios es por que apriendo los lenguajes mietras hago esto asi dijiero mejor la informacion, no soy novato del todo si notas cierto orden en los script es por que antes cree un videojuego con conocimiento  cero del motor asi que no es la primera ves que hago algo sin saber absolutamente nada 0s_0, por cierto deje comentarios como estos en otros scripts este es el comentario numero 1 */
 
 							//--ATTM: Francisco josue--//
 

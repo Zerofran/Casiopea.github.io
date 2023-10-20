@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'nunito';
-    src: url('../font/Nunito-Black.ttf') format('truetype');
+    src: url('../../font/Nunito-Black.ttf') format('truetype');
     /*font-family: 'nunito', Arial, sans-serif;*/
 }
 
@@ -255,69 +255,28 @@ body{
     z-index: 100;
 }
 
-#chat_container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Establecer la altura del contenedor al 100% del viewport height */
-}
 
-#prompt {
-    text-align: center;
-    width: 80%; /* Ancho del cuadro de entrada */
-    padding: 10px; /* Espaciado interno del cuadro de entrada */
-    margin: 10px 0; /* Margen alrededor del cuadro de entrada */
-    border: 1px solid #ccc; /* Borde del cuadro de entrada */
-    border-radius: 5px; /* Radio de borde para esquinas redondeadas */
-    font-size: 16px; /* Tamaño de fuente del texto en el cuadro de entrada */
-}
-
-#generate {
-    padding: 10px 20px; /* Espaciado interno del botón */
-    margin: 10px 0; /* Margen alrededor del botón */
-    border: none; /* Eliminar el borde del botón */
-    border-radius: 5px; /* Radio de borde para esquinas redondeadas */
-    background-color: #4caf50; /* Color de fondo del botón */
-    color: white; /* Color del texto en el botón */
-    font-size: 16px; /* Tamaño de fuente del texto en el botón */
-    cursor: pointer; /* Cambiar el cursor al pasar el mouse sobre el botón */
-}
-
-#generate:hover {
-    background-color: #45a049;
-}
-
-/* Estilos para el cuadro de texto del chat */
-#chatbox {
-    width: 80%; /* Ancho del cuadro de texto */
-    height: 300px; /* Altura del cuadro de texto */
-    overflow-y: auto; /* Agregar barra de desplazamiento vertical si el contenido es demasiado grande */
-    border: 1px solid #ccc; /* Borde del cuadro de texto */
-    border-radius: 5px; /* Radio de borde para esquinas redondeadas */
-    padding: 10px; /* Espaciado interno del cuadro de texto */
-    margin-bottom: 20px; /* Margen en la parte inferior del cuadro de texto */
-    font-size: 14px; /* Tamaño de fuente del texto en el cuadro de texto */
-}
-
-/* Estilos para los mensajes del chat */
-.message {
-    margin-bottom: 10px; /* Margen en la parte inferior de cada mensaje */
-}
-
-/* Estilos para los mensajes del chat del ChatBot */
-.bot-message {
-    color: #0084ff; /* Color del texto para los mensajes del ChatBot */
-}
-
-/* Estilos para los mensajes del usuario */
-.user-message {
-    color: #4caf50; /* Color del texto para los mensajes del usuario */
-}
 
 /*--SISTEMA RESPONSIVO--*/
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+    /* Redefine los estilos para pantallas más pequeñas */
+    .box_img img {
+        width: 100%; /* Ajusta el ancho al 100% del contenedor en dispositivos móviles */
+    }
+
+    .text_head {
+        margin-top: 10px; /* Espaciado superior reducido en dispositivos móviles */
+    }
+
+    .star input[type="radio"] {
+        margin: 5px 0; /* Espaciado entre las estrellas reducido en dispositivos móviles */
+    }
+}
+
 
 /*-------------------------*/
+
 
 .cerrar-sesion {
     position: fixed;
