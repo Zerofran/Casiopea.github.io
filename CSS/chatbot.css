@@ -72,7 +72,7 @@ body{
 
 .menu nav ul li {
 	list-style: none;
-	margin: 15px 15px;
+	margin: 10px 10px;
 }
 
 
@@ -81,6 +81,7 @@ body{
 .menu nav ul li a {
 	color: black;
 	font-size: 15px;
+    margin: 0 10px;
 	position: relative;
 }
 
