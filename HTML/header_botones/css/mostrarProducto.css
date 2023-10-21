@@ -18,109 +18,96 @@
   font-family: 'nunito', Arial, sans-serif;
 }
 
-
+/* Aqui comienza el header */
+/* Aqui empieza el codigo para el header */
 header {
-  width: 100%;
-  height: 120px;
-  position: fixed;
-  z-index: 100;
-  background-color: rgba(128, 128, 128, 0.9);
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    z-index: 100;
+    background-color: rgba(225, 225, 225, 0.9);
 }
 
 body{
-  background-color: white;
+	background-color: white;
 }
 
-.btn_axes{
-    text-decoration: underline white;
-}
-
-/* Establecer el estilo de los botones que controlan el filtro*/
-.filter-button {
-  background-color: #0074cc;
-  color: white;
-  border: none;
-  padding: 8px 16px;
-  margin: 5px;
-  cursor: pointer;
-}
-
-/* Establecer el estilo del botón activo */
-.filter-button.active {
-  background-color: #0056a8;
-}
 
 .container__header {
-  max-width: 1700px;
-  height: 100%;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0px 20px;
+	max-width: 1700px;
+	height: 100%;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0px 20px;
 
 }
 
 
 .logo{
-  display: flex;
-  align-items: center;
-  position: relative;
-  z-index: 1;
+	display: flex;
+	align-items: center;
+	position: relative;
+	z-index: 1;
 }
 
 .logo img {
-  width: 200px;
+	max-width: 150px;
 }
 
 .menu {
-  margin-top: 10px;
-  display: flex;
-  align-items: center;
+	margin: 0;
+	display: flex;
+	align-items: center;
 }
 
 .menu nav {
-  margin: 0px 20px;
+	margin: 0px 20px;
 }
 
 .menu nav ul {
-  display: flex;
+	display: flex;
 }
 
 
 .menu nav ul li {
-  list-style: none;
-  margin: 20px 20px;
+	list-style: none;
+	margin: 10px 10px;
 }
 
 
-/*--Aqui se controla los botones del encabezado--*/
-  
+/*--Aqui se controla los botones del envabezado--*/
+
 .menu nav ul li a {
-  color: skyblue;
-  font-size: 30px;
-  position: relative;
+	color: black;
+	font-size: 15px;
+    margin: 0 10px;
+	position: relative;
+    font-weight: normal;
 }
 
 .menu nav ul li a:hover{
-  color: brown;
-  text-decoration: underline white;
+	color: rgb(243, 159, 90);
+	text-decoration: underline rgb(243, 159, 90);;
 }
 
 /*-------------------------------------------*/
 
 .menu .socialMedia {
-  margin: 0px 0px;
+	margin: 0px 0px;
 }
 
 .menu .socialMedia a {
-  margin: 0px 4px;
+	margin: 0px 4px;
 }
+
+/*-------------------------------------------*/
 
 /*--modificar la imagen de social media al color deseado cuando el maus esta sobre el*/
 .menu .socialMedia img{
-  width: 50px;
-  z-index: 2;
+	width: 50px;
+	z-index: 2;
 }
 
 .socialMedia img {
@@ -136,35 +123,45 @@ body{
 /*-----------------------------------------------------------------------------------*/
 
 .container__cover{
-  padding-top: 170px;
-  padding-bottom: 100px;
+	padding-top: 80px;
+	padding-bottom: 100px;
 }
 .cover{
-  max-width: 100%;
-  align-items: center;
+	max-width: 100%;
+	align-items: center;
 }
-
-.img_cover{
-  width: 100%;
-  height: 600px;
-  overflow: hidden;
-  display: flex;
-  align-items: center; /* Centra verticalmente */
-    justify-content: center; /* Centra horizontalmente */
-}
-
-.img_cover img{
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-
 /*Aqui se ara el estilo de los botones de Proximo destino*/
 
 .text_head{
   margin-top: 30px;
   margin-left: 20px;
 }
+
+/* Establecer el estilo de los botones que controlan el filtro*/
+.filter-button {
+    background-color: #0074cc;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    margin: 5px;
+    cursor: pointer;
+  }
+  
+  /* Establecer el estilo del botón activo */
+  .filter-button.active {
+    background-color: #0056a8;
+  }
+  
+  .container__header {
+    max-width: 1700px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+  
+  }
 
 /* Aplica un display grid al contenedor .content_img */
 .content_img {
@@ -232,25 +229,25 @@ footer h2{
 /* Estilos para tamaños de pantalla más grandes */
 @media (min-width: 1200px) {
     .menu {
-        margin-top: 10px;
+        margin: 0;
         display: flex;
         align-items: center;
     }
+    .container__cover{
+        padding-top: 80px;
+        padding-bottom: 100px;
+    }
 
     .logo img {
-        max-width: 200px; /* Ajusta el tamaño máximo del logotipo */
+        max-width: 150px; /* Ajusta el tamaño máximo del logotipo */
     }
 
     .menu nav {
-        margin: 0px 20px;
+        margin: 10px;
     }
 
     .menu nav ul li {
-        margin: 20px 20px;
-    }
-
-    .menu nav ul li a {
-        font-size: 30px;
+        margin: 10px 10px;
     }
 
     /* Otros estilos específicos para tamaños de pantalla más grandes */
@@ -258,17 +255,21 @@ footer h2{
 
 
 /* Estilos para tamaños de pantalla más pequeños (menú hamburguesa) */
-@media (max-width: 1200px) {
+@media (max-width: 1199px) {
     .menu {
         flex-direction: column; /* Coloca los elementos en columna */
         text-align: center; /* Centra el texto */
     }
+    .container__cover{
+        padding-top: 80px;
+        padding-bottom: 100px;
+    }
     .menu nav ul {
-    flex-direction: column;
+        flex-direction: column;
     }
 
     .logo img {
-        max-width: 200px; /* Ajusta el tamaño máximo del logotipo */
+        max-width: 125px; /* Ajusta el tamaño máximo del logotipo */
     }
 
     .menu nav {
@@ -283,7 +284,7 @@ footer h2{
     }
 
     .bar {
-        background: #333;
+        background: rgb(0, 103, 165);
         height: 4px;
         width: 30px;
         margin: 3px 0;
@@ -294,9 +295,9 @@ footer h2{
     .menu nav.show-menu {
         display: flex;
         flex-direction: column;
-        background: #333;
+        background: rgba(225, 225, 225, 0.9);
         position: absolute;
-        top: 70px;
+        top: 80px;
         left: 0;
         width: 100%;
         text-align: center;
@@ -312,8 +313,7 @@ footer h2{
         margin: 10px 0;
     }
 }
-
-/*-------------------------*/
+/* -------------------------------------- */
 .cerrar-sesion {
     position: fixed;
     bottom: 10px; /* Ajusta la distancia desde el borde inferior */

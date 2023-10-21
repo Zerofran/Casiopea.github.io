@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <?php
+<<<<<<< Updated upstream
 //Verificando el rol de ususario y revisar que secio esta abierta
 include '../../../PHP/verificarRol_be.php';
 =======
@@ -20,6 +21,17 @@ include '../../../PHP/verificarRol_be.php';
     }
 
 >>>>>>> 9eeda649c777f0ed730aeb777882743a06071fec
+=======
+// Iniciar la sesión
+session_start();
+
+// Verificar si la sesión está iniciada
+if (isset($_SESSION['usuario'])) {
+    $urlDestino = "1true";
+} else {
+    $urlDestino = "0false";
+}
+>>>>>>> Stashed changes
 ?>
 
 <!DOCTYPE html>
@@ -27,19 +39,28 @@ include '../../../PHP/verificarRol_be.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/mostrarProducto.css">
+    <link rel="stylesheet" href="../../../HTML/header_botones/css/mostrarProducto.css">
     <title>Filtro de Hoteles</title>
 </head>
 <body>
     <!--HEADER - MENU-->
 
     <header>
+<<<<<<< Updated upstream
         <div class="container__header">
             <div class="logo">
                 <a href="../../../HTML/p_principal.php">
                     <img src="../../../IMG/logo.png" alt="">
                 </a>
             </div>
+=======
+		<div class="container__header">
+			<div class="logo">
+				<a href="../../../HTML/p_principal.php">
+					<img src="../../../IMG/logo.png" alt="">
+				</a>
+			</div>
+>>>>>>> Stashed changes
 
             <!-- Agregar aquí el botón de menú hamburguesa -->
             <div class="menu-toggle">
@@ -49,6 +70,7 @@ include '../../../PHP/verificarRol_be.php';
             </div>
             <!-- Fin del botón de menú hamburguesa -->
 
+<<<<<<< Updated upstream
             <div class="menu"> 
                 <nav>
                     <ul>
@@ -72,6 +94,30 @@ include '../../../PHP/verificarRol_be.php';
 
         </div>
     </header>
+=======
+			<div class="menu"> 
+				<nav>
+					<ul>
+						<li><a href="#" id="chatbot">Preguntame!</a></li>
+						<li><a href="#" id="hoteles">Hoteles</a></li>
+						<li><a href="#" id="restaurantes">Restaurantes</a></li>
+						<li><a href="#" id="gastronomia">Gastronomía</a></li>
+						<li><a href="#" id="museo">Museos</a></li>
+						<li><a href="#" id="rutas">Rutas</a></li>
+					</ul>
+				</nav>
+				
+				<div class="socialMedia">
+					<a href="#" id="ajustes">
+						<img src="../../../IMG/user.png" alt="">
+					</a>
+				</div>
+			</div>
+
+		</div>
+	</header>
+
+>>>>>>> Stashed changes
     <main>
         <div class="container__cover div__offset">
 
@@ -112,8 +158,62 @@ include '../../../PHP/verificarRol_be.php';
     </main>
 
     <a href="../PHP/cerrar_sesion.php" class="cerrar-sesion">Cerrar Sesión</a>
+    <script src="../../../JS/menuAmburgesa.js"></script>
     <script src="../JS/sistemaFiltrado.js"></script>
     <script src="../JS/AJAX.js"></script>
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+		// Obtener todas las etiquetas <a> que quieres cambiar
+		const chatbot = document.getElementById("chatbot");
+		const hoteles = document.getElementById("hoteles");
+		const restaurantes = document.getElementById("restaurantes");
+		const gastronomia = document.getElementById("gastronomia");
+		const museo = document.getElementById("museo");
+		const rutas = document.getElementById("rutas"); 
+		const ajustes = document.getElementById("ajustes");
 
+		// Verificar el valor de urlDestino
+		var urlDestino = "<?php echo $urlDestino; ?>";
+
+		if (urlDestino === "1true") {
+			// Cambiar la URL para el enlace chatbot
+			chatbot.href = "../../../HTML/chatbot.php";
+
+			// Cambiar la URL para el enlace hoteles
+			hoteles.href = "mostrar_producto.php";
+
+			// Cambiar la URL para el enlace restaurantes
+			restaurantes.href = "URL_si_sesion_iniciada.php";
+
+			gastronomia.href = "URL_si_sesion_iniciada.php";
+
+			museo.href = "URL_si_sesion_iniciada.php";
+
+			rutas.href = "../../../HTML/rutas.php";
+
+			ajustes.href = "admin/ajustes.php";
+
+		} 
+		else if (urlDestino === "0false") {
+			alert('se requiere una cuenta para permisos superiores')
+			// Cambiar la URL para el enlace chatbot
+			chatbot.href = "../index.php";
+
+			// Cambiar la URL para el enlace hoteles
+			hoteles.href = "../index.php";
+
+			// Cambiar la URL para el enlace restaurantes
+			restaurantes.href = "../index.php";
+
+			gastronomia.href = "../index.php";
+
+			museo.href = "../index.php";
+
+			rutas.href = "../index.php";	
+
+			ajustes.href = "../index.php";	    
+		}
+	});
+	</script>
 </body>
 </html>

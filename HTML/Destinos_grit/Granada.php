@@ -16,10 +16,11 @@ include '../../PHP/verificarRol_be.php';
 <body>
 
 	<!--HEADER - MENU-->
+
 	<header>
 		<div class="container__header">
 			<div class="logo">
-				<a href="../p_principal.php">
+				<a href="../../HTML/p_principal.php">
 					<img src="../../IMG/logo.png" alt="">
 				</a>
 			</div>
@@ -33,18 +34,19 @@ include '../../PHP/verificarRol_be.php';
 	        <!-- Fin del botón de menú hamburguesa -->
 
 			<div class="menu"> 
-				<!-- class="btn_axes" para los botones subrayados-->
 				<nav>
 					<ul>
-						<li><a href="../header_botones/hoteles/mostrar_producto.php">Hoteles</a></li>
-						<li><a href="#">Restaurantes</a></li>
-						<li><a href="#">Gastronomía</a></li>
-						<li><a href="#">rutas</a></li>
+						<li><a href="#" id="chatbot">Preguntame!</a></li>
+						<li><a href="#" id="hoteles">Hoteles</a></li>
+						<li><a href="#" id="restaurantes">Restaurantes</a></li>
+						<li><a href="#" id="gastronomia">Gastronomía</a></li>
+						<li><a href="#" id="museo">Museos</a></li>
+						<li><a href="#" id="rutas">Rutas</a></li>
 					</ul>
 				</nav>
-
+				
 				<div class="socialMedia">
-					<a href="../admin/perfil.php">
+					<a href="#" id="ajustes">
 						<img src="../../IMG/user.png" alt="">
 					</a>
 				</div>

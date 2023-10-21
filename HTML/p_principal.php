@@ -29,6 +29,7 @@ include '../PHP/verificarRol_be.php';
 ?>
 
 
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -99,11 +100,15 @@ include '../PHP/verificarRol_be.php';
 		<div class="container__cover div__offset">
 			<div class="cover">
 				<section class="img_cover">
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 					<img src="../IMG/img8.jpg" alt="">
 =======
 					<img src="../IMG/img7.jpg" alt="">
 >>>>>>> 9eeda649c777f0ed730aeb777882743a06071fec
+=======
+					<img src="../IMG/portada.jpg" alt="">
+>>>>>>> Stashed changes
 				</section>
 			</div>
 
@@ -248,10 +253,52 @@ include '../PHP/verificarRol_be.php';
 	    });
 	  }
 
+<<<<<<< Updated upstream
 	  waitForCargo().then((cargo) => {
 	    console.log("El valor de id_cargo es: " + cargo);
 	    // Puedes realizar acciones que dependan de cargo aquí
 	  });
+=======
+		if (urlDestino === "1true") {
+			// Cambiar la URL para el enlace chatbot
+			chatbot.href = "chatbot.php";
+
+			// Cambiar la URL para el enlace hoteles
+			hoteles.href = "../HTML/header_botones/hoteles/mostrar_producto.php";
+
+			// Cambiar la URL para el enlace restaurantes
+			restaurantes.href = "URL_si_sesion_iniciada.php";
+
+			gastronomia.href = "URL_si_sesion_iniciada.php";
+
+			museo.href = "URL_si_sesion_iniciada.php";
+
+			rutas.href = "rutas.php";
+
+			ajustes.href = "admin/ajustes.php";
+
+		} 
+		else if (urlDestino === "0false") {
+			alert('se requiere una cuenta para permisos superiores')
+			// Cambiar la URL para el enlace chatbot
+			chatbot.href = "../index.php";
+
+			// Cambiar la URL para el enlace hoteles
+			hoteles.href = "../index.php";
+
+			// Cambiar la URL para el enlace restaurantes
+			restaurantes.href = "../index.php";
+
+			gastronomia.href = "../index.php";
+
+			museo.href = "../index.php";
+
+			rutas.href = "../index.php";	
+
+			ajustes.href = "../index.php";	    
+		}
+	});
+>>>>>>> Stashed changes
 	</script>
 =======
 >>>>>>> 9eeda649c777f0ed730aeb777882743a06071fec
