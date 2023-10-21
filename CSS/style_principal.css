@@ -21,7 +21,7 @@
 /* Aqui empieza el codigo para el header */
 header {
     width: 100%;
-    height: 145px;
+    height: 80px;
     position: fixed;
     z-index: 100;
     background-color: rgba(225, 225, 225, 0.9);
@@ -52,11 +52,11 @@ body{
 }
 
 .logo img {
-	width: 200px;
+	max-width: 150px;
 }
 
 .menu {
-	margin-top: 10px;
+	margin: 0;
 	display: flex;
 	align-items: center;
 }
@@ -72,21 +72,21 @@ body{
 
 .menu nav ul li {
 	list-style: none;
-	margin: 25px 25px;
+	margin: 15px 15px;
 }
 
 
 /*--Aqui se controla los botones del encabezado--*/
 	
 .menu nav ul li a {
-	color: rgb(0, 103, 165);
-	font-size: 25px;
+	color: black;
+	font-size: 15px;
 	position: relative;
 }
 
 .menu nav ul li a:hover{
-	color: rgb(90, 174, 243);
-	text-decoration: underline rgb(90, 174, 243);
+	color: rgb(243, 159, 90);
+	text-decoration: underline rgb(243, 159, 90);;
 }
 
 /*-------------------------------------------*/
@@ -118,8 +118,8 @@ body{
 /*-----------------------------------------------------------------------------------*/
 
 .container__cover{
-	padding-top: 145px;
-	padding-bottom: 100px;
+    padding-top: 100px;
+    background-color: white;
 }
 .cover{
 	max-width: 100%;
@@ -245,25 +245,25 @@ body{
 /* Estilos para tamaños de pantalla más grandes */
 @media (min-width: 1200px) {
     .menu {
-        margin-top: 10px;
+        margin: 0;
         display: flex;
         align-items: center;
     }
     .container__cover{
-        padding-top: 145px;
+        padding-top: 80px;
         padding-bottom: 100px;
     }
 
     .logo img {
-        max-width: 200px; /* Ajusta el tamaño máximo del logotipo */
+        max-width: 150px; /* Ajusta el tamaño máximo del logotipo */
     }
 
     .menu nav {
-        margin: 0px 20px;
+        margin: 10px;
     }
 
     .menu nav ul li {
-        margin: 20px 20px;
+        margin: 10px 10px;
     }
 
     /* Otros estilos específicos para tamaños de pantalla más grandes */
@@ -271,13 +271,13 @@ body{
 
 
 /* Estilos para tamaños de pantalla más pequeños (menú hamburguesa) */
-@media (max-width: 1100px) {
+@media (max-width: 1199px) {
     .menu {
         flex-direction: column; /* Coloca los elementos en columna */
         text-align: center; /* Centra el texto */
     }
     .container__cover{
-        padding-top: 100px;
+        padding-top: 80px;
         padding-bottom: 100px;
     }
     .menu nav ul {
@@ -285,7 +285,7 @@ body{
     }
 
     .logo img {
-        max-width: 200px; /* Ajusta el tamaño máximo del logotipo */
+        max-width: 125px; /* Ajusta el tamaño máximo del logotipo */
     }
 
     .menu nav {

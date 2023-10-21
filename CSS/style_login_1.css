@@ -20,7 +20,7 @@ body:before {
   /* Agregar el gradiente sobre la imagen */
   content: "";
   width: 100%;
-  min-height: 150vh; /* Aumenta este valor para cubrir más la pantalla */
+  min-height: 200vh; /* Aumenta este valor para cubrir más la pantalla */
   position: absolute;
   top: 0;
   left: 0;
@@ -47,7 +47,7 @@ main{
 
 /*---ESTILOS DE LA CAJA TRASERA---*/
 .caja__trasera{
-  width: 100 %;
+  width: 100%;
   padding: 10px 20px ;
   display: flex;
   justify-content: center;

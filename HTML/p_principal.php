@@ -52,7 +52,7 @@ if (isset($_SESSION['usuario'])) {
 						<li><a href="#" id="restaurantes">Restaurantes</a></li>
 						<li><a href="#" id="gastronomia">Gastronomía</a></li>
 						<li><a href="#" id="museo">Museos</a></li>
-						<li><a href="rutas.php" id="rutas">Rutas</a></li>
+						<li><a href="#" id="rutas">Rutas</a></li>
 					</ul>
 				</nav>
 				
@@ -204,62 +204,59 @@ if (isset($_SESSION['usuario'])) {
 	<a href="../PHP/cerrar_sesion.php" class="cerrar-sesion">Cerrar Sesión</a>
 	<script type="text/javascript" src="../JS/carrusel.js"></script>
 	<script type="text/javascript" src="../JS/menuAmburgesa.js"></script>
-
 	<script>
 		document.addEventListener("DOMContentLoaded", function () {
-		    // Obtener todas las etiquetas <a> que quieres cambiar
-		    const chatbot = document.getElementById("chatbot");
-		    const hoteles = document.getElementById("hoteles");
-		    const restaurantes = document.getElementById("restaurantes");
-		    const gastronomia = document.getElementById("gastronomia");
-		    const museo = document.getElementById("museo");
-		    const rutas = document.getElementById("rutas"); 
-		    const ajustes = document.getElementById("ajustes");
+    // Obtener todas las etiquetas <a> que quieres cambiar
+    const chatbot = document.getElementById("chatbot");
+    const hoteles = document.getElementById("hoteles");
+    const restaurantes = document.getElementById("restaurantes");
+    const gastronomia = document.getElementById("gastronomia");
+    const museo = document.getElementById("museo");
+    const rutas = document.getElementById("rutas"); 
+    const ajustes = document.getElementById("ajustes");
 
-		    // Verificar el valor de urlDestino
-		    var urlDestino = "<?php echo $urlDestino; ?>";
+    // Verificar el valor de urlDestino
+    var urlDestino = "<?php echo $urlDestino; ?>";
 
-		    if (urlDestino === "1true") {
-		        // Cambiar la URL para el enlace chatbot
-		        chatbot.href = "chatbot.php";
+    if (urlDestino === "1true") {
+        // Cambiar la URL para el enlace chatbot
+        chatbot.href = "chatbot.php";
 
-		        // Cambiar la URL para el enlace hoteles
-		        hoteles.href = "../HTML/header_botones/hoteles/mostrar_producto.php";
+        // Cambiar la URL para el enlace hoteles
+        hoteles.href = "../HTML/header_botones/hoteles/mostrar_producto.php";
 
-		        // Cambiar la URL para el enlace restaurantes
-		        restaurantes.href = "URL_si_sesion_iniciada.php";
+        // Cambiar la URL para el enlace restaurantes
+        restaurantes.href = "URL_si_sesion_iniciada.php";
 
-		        gastronomia.href = "URL_si_sesion_iniciada.php";
+        gastronomia.href = "URL_si_sesion_iniciada.php";
 
-		        museo.href = "URL_si_sesion_iniciada.php";
+        museo.href = "URL_si_sesion_iniciada.php";
 
-		        rutas.href = "URL_si_sesion_iniciada.php";
+        rutas.href = "rutas.php";
 
-		        ajustes.href = "admin/ajustes.php";
+        ajustes.href = "admin/ajustes.php";
 
 
-		    } else if (urlDestino === "0false") {
-		    	alert('se requiere una cuenta para permisos superiores')
-		        // Cambiar la URL para el enlace chatbot
-		        chatbot.href = "../index.php";
+    } else if (urlDestino === "0false") {
+        alert('se requiere una cuenta para permisos superiores')
+        // Cambiar la URL para el enlace chatbot
+        chatbot.href = "../index.php";
 
-		        // Cambiar la URL para el enlace hoteles
-		        hoteles.href = "../index.php";
+        // Cambiar la URL para el enlace hoteles
+        hoteles.href = "../index.php";
 
-		        // Cambiar la URL para el enlace restaurantes
-		        restaurantes.href = "../index.php";
+        // Cambiar la URL para el enlace restaurantes
+        restaurantes.href = "../index.php";
 
-		        gastronomia.href = "../index.php";
+        gastronomia.href = "../index.php";
 
-		        museo.href = "../index.php";
+        museo.href = "../index.php";
 
-		        rutas.href = "../index.php";	
+        rutas.href = "../index.php";	
 
-		        ajustes.href = "../index.php";	    
-		    }
-		});
+        ajustes.href = "admin/ajustes.php";	    
+    }
+});
 	</script>
-
-
 </body>
 </html>
