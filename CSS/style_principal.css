@@ -18,7 +18,7 @@
 	font-family: 'nunito', Arial, sans-serif;
 }
 
-
+/* Aqui empieza el codigo para el header */
 header {
     width: 100%;
     height: 145px;
@@ -76,7 +76,7 @@ body{
 }
 
 
-/*--Aqui se controla los botones del envabezado--*/
+/*--Aqui se controla los botones del encabezado--*/
 	
 .menu nav ul li a {
 	color: rgb(0, 103, 165);
@@ -87,58 +87,6 @@ body{
 .menu nav ul li a:hover{
 	color: rgb(90, 174, 243);
 	text-decoration: underline rgb(90, 174, 243);
-}
-
-/*-------------------------------------------*/
-
-.menu .socialMedia {
-	margin: 0px 0px;
-}
-
-.menu .socialMedia a {
-	margin: 0px 4px;
-}
-
-
-
-/*--Aqui se controla los botones del envabezado--*/
-	
-.menu nav ul li a {
-	color: rgb(0, 103, 165);
-	font-size: 25px;
-	position: relative;
-}
-
-.menu nav ul li a:hover{
-	color: rgb(90, 174, 243);
-	text-decoration: underline rgb(90, 174, 243);
-}
-
-/*-------------------------------------------*/
-
-.menu .socialMedia {
-	margin: 0px 0px;
-}
-
-.menu .socialMedia a {
-	margin: 0px 4px;
-}
-
-/*--modificar la imagen de social media al color deseado cuando el maus esta sobre el*/
-.menu .socialMedia img{
-	width: 50px;
-	z-index: 2;
-}
-
-.socialMedia img {
-    filter: grayscale(100%); /* Convierte la imagen en blanco y negro */
-    transition: filter 0.5s ease; /* Aplica una transición suave */
-    text-decoration: none;
-}
-
-.socialMedia:hover img {
-    filter: hue-rotate(180deg); /* Cambia el color a azul al pasar el ratón */
-    text-decoration: underline;
 }
 
 /*-------------------------------------------*/
@@ -170,7 +118,7 @@ body{
 /*-----------------------------------------------------------------------------------*/
 
 .container__cover{
-	padding-top: 120px;
+	padding-top: 145px;
 	padding-bottom: 100px;
 }
 .cover{
@@ -261,6 +209,7 @@ body{
 	flex-direction: row;
     transition: transform 0.5s ease;
     align-items: flex-start;
+    z-index: 2;
 }
 
 
@@ -284,31 +233,13 @@ body{
 }
 #prevBtn {
     left: -10px;
-    z-index: 5;
+    z-index: 100;
 }
 
 #nextBtn {
     right: -10px;
-    z-index: 5;
+    z-index: 100;
 }
-
-footer{
-	padding-top: 0px;
-	padding: 200px;
-	text-align: center;
-	color: green;
-	background-color: blue;
-	margin-top: 0px;
-}
-
-footer h1{
-	color: white;
-}
-
-footer h2{
-	color: white;
-}
-
 
 /*--SISTEMA RESPONSIVO--*/
 /* Estilos para tamaños de pantalla más grandes */
@@ -317,6 +248,10 @@ footer h2{
         margin-top: 10px;
         display: flex;
         align-items: center;
+    }
+    .container__cover{
+        padding-top: 145px;
+        padding-bottom: 100px;
     }
 
     .logo img {
@@ -331,22 +266,22 @@ footer h2{
         margin: 20px 20px;
     }
 
-    .menu nav ul li a {
-        font-size: 30px;
-    }
-
     /* Otros estilos específicos para tamaños de pantalla más grandes */
 }
 
 
 /* Estilos para tamaños de pantalla más pequeños (menú hamburguesa) */
-@media (max-width: 1200px) {
+@media (max-width: 1100px) {
     .menu {
         flex-direction: column; /* Coloca los elementos en columna */
         text-align: center; /* Centra el texto */
     }
+    .container__cover{
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
     .menu nav ul {
-    flex-direction: column;
+        flex-direction: column;
     }
 
     .logo img {
@@ -365,7 +300,7 @@ footer h2{
     }
 
     .bar {
-        background: #333;
+        background: rgb(0, 103, 165);
         height: 4px;
         width: 30px;
         margin: 3px 0;
@@ -376,9 +311,9 @@ footer h2{
     .menu nav.show-menu {
         display: flex;
         flex-direction: column;
-        background: #333;
+        background: rgba(225, 225, 225, 0.9);
         position: absolute;
-        top: 70px;
+        top: 145px;
         left: 0;
         width: 100%;
         text-align: center;
@@ -394,9 +329,58 @@ footer h2{
         margin: 10px 0;
     }
 }
+/* -------------------------------------- */
 
+/* Estilos CSS para el footer */
+.footer {
+    background-color: #333; /* Cambia esto al color de fondo que desees */
+    color: white; /* Cambia esto al color del texto que desees */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+}
 
+.imagotipo {
+    order: 1;
+}
 
+.imagotipo img {
+    width: 100px; /* Establece el ancho del imagotipo según tus necesidades */
+    height: auto; /* Permite que la altura se ajuste automáticamente para mantener la proporción */
+    max-width: 100%; /* Evita que el imagotipo se haga más grande que su tamaño original */
+}
+
+.social-icons {
+    order: 3;
+    display: flex;
+    gap: 10px;
+}
+
+.location-text {
+    order: 2;
+    text-align: center;
+}
+
+.copyright,
+.menu {
+    order: 4;
+    text-align: center;
+}
+
+/* Estilos para los iconos de redes sociales */
+.social-icons img {
+    width: 30px; /* Ajusta el tamaño de los iconos según tus necesidades */
+    height: auto;
+}
+
+/* Estilos para los enlaces del menú */
+.menu a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
 
 /*-------------------------*/
 

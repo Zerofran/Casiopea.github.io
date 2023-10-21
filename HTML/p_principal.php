@@ -1,8 +1,4 @@
-<?php
-//Verificando el rol de ususario y revisar que secio esta abierta
-include '../PHP/verificarRol_be.php';
 
-?>
 
 <!DOCTYPE html>
 <html>
@@ -66,7 +62,7 @@ include '../PHP/verificarRol_be.php';
 		<div class="container__cover div__offset">
 			<div class="cover">
 				<section class="img_cover">
-					<img src="../IMG/img8.jpg" alt="">
+					<img src="../IMG/img8.JPG" alt="">
 				</section>
 			</div>
 
@@ -75,7 +71,7 @@ include '../PHP/verificarRol_be.php';
 			<div class="content_img">
 				<div class="box_img">
 					<img src="../IMG/img2.png" alt="">
-					<a href="Destinos_grit/Granada.php" class="btn_zona">Granada</a>
+					<a href="Destinos_grit/Granada.php"  class="btn_zona">Granada</a>
 				</div>
 				<div class="box_img">
 					<img src="../IMG/img2.png" alt="">

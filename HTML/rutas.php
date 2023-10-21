@@ -78,7 +78,7 @@ include '../PHP/verificarRol_be.php';
                     <option value="driving">Vehiculo</option>
                     <option value="bicycling">Bicleta</option>
                     <option value="walking">Caminando</option>
-                </select>>
+                </select>
                 <button type="button" onclick="mostrarMapa()">Obtener Ruta</button>
             </form>
         </div>
