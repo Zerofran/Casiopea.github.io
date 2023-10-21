@@ -24,7 +24,7 @@
 	<title>Chat de Ayuda</title>
 
 	<!-- aqui se linquea hacia la hoja de estilos .css -->
-	<link rel="stylesheet" type="text/css" href="../../CSS/chatbot.css">
+	<link rel="stylesheet" type="text/css" href="../CSS/chatbot.css">
 	<!--Links para las fuentes-->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,8 +36,8 @@
 	<header>
 		<div class="container__header div__offset">
 			<div class="logo">
-				<a href="../../HTML/p_principal.php">
-					<img src="../../IMG/logo.png" alt="">
+				<a href="p_principal.php">
+					<img src="../IMG/logo.png" alt="">
 				</a>
 			</div>
 
