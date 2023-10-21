@@ -14,7 +14,7 @@ include '../../PHP/verificarRol_be.php';
 	<!-- aqui se linquea hacia la hoja de estilos .css -->
 	<link rel="stylesheet" type="text/css" href="css/ajustes.css">
 	<link rel="stylesheet" type="text/css" href="../../CSS/style_principal.css">
-
+	
 </head>
 
 <body>
@@ -103,6 +103,11 @@ include '../../PHP/verificarRol_be.php';
 				    </form>
 			    </div>
 			</section>
+		</div>
+
+		<div class="recurso">
+			<h1>aqui puedes crear los servisios que se ofreseran a los demas</h1>
+			<a href="admin.php">crear</a>
 		</div>
     </main>
 
