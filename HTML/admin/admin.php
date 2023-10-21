@@ -1,48 +1,6 @@
 <?php
-// --- INCLUYENDO LA LLAVE ---
-include 'conexion_be.php';
-
-// Comprobar si el usuario está autenticado, por ejemplo, mediante una sesión.
-// Puedes agregar lógica de autenticación aquí.
-
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // Obtener los datos del formulario
-    $nuevo_usuario = $_POST['nuevo_usuario'];
-    $nueva_contrasena = $_POST['nueva_contrasena'];
-    $nuevo_id_cargo = $_POST['nuevo_id_cargo'];
-
-    // Validar y procesar los cambios
-    if (!empty($nuevo_usuario)) {
-        // Actualizar el nombre de usuario en la base de datos
-        $update_query = "UPDATE usuarios SET usuario = '$nuevo_usuario' WHERE id = {ID_DEL_USUARIO_ACTUAL}";
-        mysqli_query($conexion, $update_query);
-    }
-
-    if (!empty($nueva_contrasena)) {
-        // Hashear la nueva contraseña (asegúrate de usar un algoritmo seguro)
-        $nueva_contrasena_hashed = hash('sha512', $nueva_contrasena);
-
-        // Actualizar la contraseña en la base de datos
-        $update_query = "UPDATE usuarios SET contrasena = '$nueva_contrasena_hashed' WHERE id = {ID_DEL_USUARIO_ACTUAL}";
-        mysqli_query($conexion, $update_query);
-    }
-
-    if (!empty($nuevo_id_cargo)) {
-        // Actualizar el ID de cargo en la base de datos
-        $update_query = "UPDATE usuarios SET id_cargo = '$nuevo_id_cargo' WHERE id = {ID_DEL_USUARIO_ACTUAL}";
-        mysqli_query($conexion, $update_query);
-    }
-
-    // Redirigir al usuario a la página de configuración con un mensaje de éxito
-    header("Location: settings.html?success=true");
-} else {
-    // Redirigir al usuario a la página de configuración con un mensaje de error
-    header("Location: settings.html?error=true");
-}
-
-mysqli_close($conexion);
+include '../../PHP/verificarRol_be.php';
 ?>
-
 
 <!DOCTYPE html>
 <html lang="es">
@@ -53,6 +11,7 @@ mysqli_close($conexion);
     <title>Subir Información del Negocio</title>
 </head>
 <body>
+    <h3 id="hola"></h3>
     <h1>Subir Información del Negocio</h1>
     <form action="subir_informacion.php" method="post" enctype="multipart/form-data">
         <label for="nombre">Nombre del Negocio:</label>
@@ -80,5 +39,40 @@ mysqli_close($conexion);
 
         <input type="submit" value="Subir Información">
     </form>
+
+<!--Scripts-->
+<script type="text/javascript">
+        const cargos = document.getElementById('cargos');
+        const saludo = document.getElementById('hola');
+      // En cualquier otro script en la misma página
+    //se puede llamar de manera normal pero estoe es por si el php se ejecuta muy tarde
+      function waitForCargo() {
+        return new Promise((resolve) => {
+          if (window.id_cargo !== undefined) {
+            resolve(window.id_cargo);
+          } else {
+            setTimeout(() => waitForCargo().then(resolve), 100);
+          }
+        });
+      }
+
+      waitForCargo().then((cargo) => {
+        console.log("El valor de id_cargo es: " + cargo);
+        // Puedes realizar acciones que dependan de cargo aquí
+        if (window.id_cargo == 1) {
+            console.log("se ocultan cosas: " + cargo);
+            cargos.style.display = "none";
+        } else {
+            console.log("todo normal: " + cargo);
+            cargos.style.display = "block";
+          }
+      });
+        document.addEventListener('DOMContentLoaded', function () {
+            console.log("prueba de los id y usuarios");
+            console.log("ID: " + window.id_cargo);
+            console.log("Usuario: " +window.usuario);
+            saludo.textContent = "Hola "+ window.usuario + ", aqui puedes subir informacion sobre los servicios que ofreses";
+        });
+    </script>
 </body>
 </html>
