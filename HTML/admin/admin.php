@@ -26,9 +26,19 @@ include '../../PHP/verificarRol_be.php';
         <label for="imagen">Imagen del Negocio:</label>
         <input type="file" name="imagen" accept="image/*" required><br>
 
+        <h1>Sube mas imagenes para mas informacion visual</h1>
+        <label for="imagen2">Sube una segunda imagen:</label>
+        <input type="file" name="imagen2" accept="image/*"><br>
+        <label for="imagen3">Imagen del Negocio:</label>
+        <input type="file" name="imagen3" accept="image/*"><br>
+        <label for="imagen4">Imagen del Negocio:</label>
+        <input type="file" name="imagen4" accept="image/*"><br>
+
+        <h1>El cliente debe de saber en que orarios operas</h1>
         <label for="horario">Horario de Atención:</label>
         <input type="text" name="horario"><br>
 
+        <h1>tu numero es importante para un trato directo</h1>
         <label for="contacto">Información de Contacto:</label>
         <input type="text" name="contacto"><br>
 
@@ -40,7 +50,7 @@ include '../../PHP/verificarRol_be.php';
         <input type="submit" value="Subir Información">
     </form>
 
-<!--Scripts-->
+<!--------------------------------Scripts------------------------------------>
 <script type="text/javascript">
         const cargos = document.getElementById('cargos');
         const saludo = document.getElementById('hola');

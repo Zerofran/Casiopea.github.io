@@ -21,7 +21,7 @@ if (!$conexion) {
 
 $correo_encriptado = $_SESSION['usuario'];
 // Realizar la consulta SQL para obtener id_cargo
-$query = "SELECT id_cargo, usuario FROM usuarios WHERE correo = '$correo_encriptado'";
+$query = "SELECT id_cargo, usuario, id FROM usuarios WHERE correo = '$correo_encriptado'";
 $resultado = mysqli_query($conexion, $query);
 
 if (!$resultado) {
@@ -31,8 +31,10 @@ if (!$resultado) {
     if ($fila) {
         $id_cargo = $fila['id_cargo'];
         $usuario = $fila['usuario'];
+        $id = $fila['id'];
         echo "<script>window.id_cargo = $id_cargo;</script>";
         echo "<script>window.usuario = '$usuario';</script>";
+        echo "<script>window.id = $id;</script>";
     } else {
         echo 'No se encontró un usuario con el correo encriptado.';
     }
