@@ -255,7 +255,7 @@ if (isset($_SESSION['usuario'])) {
 
 		        rutas.href = "../index.php";	
 
-		        ajustes.href = "admin/ajustes.php";	    
+		        ajustes.href = "../index.php";	    
 		    }
 		});
 	</script>
