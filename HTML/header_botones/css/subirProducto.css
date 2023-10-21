@@ -1,0 +1,127 @@
+/* Estilo general para el cuerpo de la página */
+body {
+    background: linear-gradient(45deg, #0C60A5, #5AAEF3, #F59F59);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    font-family: 'nunito', sans-serif;
+    color: white;
+}
+
+/* Animación de fondo */
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Estilo para el título "Subir Producto" */
+h1 {
+    font-family: 'LemonMilk', sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Estilo para el formulario */
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+/* Añadimos espacio entre el formulario y los campos de entrada */
+form label,
+form input[type="text"],
+form input[type="number"],
+form textarea,
+form select,
+form input[type="file"] {
+    margin-right: 10px;
+}
+
+/* Estilo para etiquetas y campos de entrada */
+label {
+    display: block;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: color 0.3s ease;
+}
+
+input[type="text"],
+input[type="number"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    color: #000;
+    font-weight: bold;
+    transition: border 0.3s ease;
+}
+
+/* Animación de cambio de color en etiquetas al enfocar un campo */
+input[type="text"]:focus + label,
+input[type="number"]:focus + label,
+textarea:focus + label,
+select:focus + label {
+    color: #F59F59;
+}
+
+/* Animación de cambio de borde al enfocar un campo */
+input[type="text"]:focus,
+input[type="number"]:focus,
+textarea:focus,
+select:focus {
+    border: 2px solid #F59F59;
+}
+
+/* Estilo para el campo de selección de archivo destacado */
+input[type="file"] {
+<<<<<<< HEAD
+    width: 97%;
+=======
+    width: 100%;
+>>>>>>> 9eeda649c777f0ed730aeb777882743a06071fec
+    padding: 10px;
+    margin-top: 20px; /* Mayor margen para separarlo del resto de los campos */
+    border: 2px solid #F59F59; /* Un borde más destacado */
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    color: #000;
+    font-weight: bold;
+    transition: border 0.3s ease;
+}
+
+/* Estilo para los tags */
+input[type="checkbox"] {
+    margin-top: 10px;
+    margin-right: 5px; /* Agregamos espacio entre los tags */
+}
+
+/* Estilo para el botón "Subir Producto" */
+input[type="submit"] {
+    width: 100%;
+    background: #5AAEF3;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background 0.5s ease;
+}
+
+input[type="submit"]:hover {
+    background: #F59F59;
+}

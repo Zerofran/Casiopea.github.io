@@ -1,0 +1,214 @@
+<<<<<<< HEAD
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>ArcGIS Maps SDK for JavaScript Tutorials: Search for an address</title>
+  <style>
+    html, body, #viewDiv {
+      padding: 0;
+      margin: 0;
+      height: 100%;
+      width: 100%;
+    }
+  </style>
+  <link rel="stylesheet" href="https://js.arcgis.com/4.27/esri/themes/light/main.css">
+  <script src="https://js.arcgis.com/4.27/"></script>
+
+  <script>
+
+  require([
+    "esri/config",
+    "esri/Map",
+    "esri/views/MapView",
+
+    "esri/widgets/Search"
+
+  ], function(esriConfig, Map, MapView, Search) {
+
+  esriConfig.apiKey = "AAPKc4c0d31cd5004689bd1759ab5f6f85f59td9AW0sLGTUR1ZuvV0tMHV_qRe_-8SvgAl1SRegO_6MKZlvHst6DiDDyDqP9HKc";
+
+  const map = new Map({
+      basemap: "arcgis-navigation"
+    });
+
+  const view = new MapView({
+      container: "viewDiv",
+      map: map,
+      center: [-122.3321,47.6062],
+      zoom: 12
+    });
+
+  const search = new Search({  //Add Search widget
+      view: view
+    });
+
+    view.ui.add(search, "top-right"); //Add to the map
+
+  });
+  </script>
+
+</head>
+<body>
+  <div id="viewDiv"></div>
+</body>
+</html>
+
+
+<!--
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>ArcGIS Maps SDK for JavaScript Tutorials: Display your location</title>
+
+    <style>
+      html,
+      body,
+      #viewDiv {
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        width: 100%;
+      }
+    </style>
+
+    <link rel="stylesheet" href="https://js.arcgis.com/4.27/esri/themes/light/main.css">
+    <script src="https://js.arcgis.com/4.27/"></script>
+
+
+    <script>
+      require([
+          "esri/config",
+          "esri/Map",
+          "esri/views/MapView",
+          "esri/widgets/Locate",
+
+          "esri/widgets/Track",
+          "esri/Graphic"
+
+        ], function(
+            esriConfig,
+            Map,
+            MapView,
+            Locate,
+
+            Track,
+            Graphic
+
+        ) {
+
+        esriConfig.apiKey = "YOUR_API_KEY";
+
+        const map = new Map({
+          basemap: "arcgis-navigation"
+        });
+
+        const view = new MapView({
+          container: "viewDiv",
+          map: map,
+          center: [-40, 28],
+          zoom: 2
+        });
+
+        const track = new Track({
+          view: view,
+          graphic: new Graphic({
+            symbol: {
+              type: "simple-marker",
+              size: "12px",
+              color: "green",
+              outline: {
+                color: "#efefef",
+                width: "1.5px"
+              }
+            }
+          }),
+          useHeadingEnabled: false
+        });
+        view.ui.add(track, "top-left");
+
+      });
+    </script>
+
+  </head>
+  <body>
+    <div id="viewDiv"></div>
+  </body>
+</html>
+
+-->
+=======
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mapa de Ubicacion en Tiempo Real</title>
+  <link rel="stylesheet" href="https://js.arcgis.com/4.24/esri/themes/light/main.css">
+  <script src="https://js.arcgis.com/4.24/"></script>
+  <style>
+    #viewDiv {
+      height: 400px;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div id="viewDiv"></div>
+  <script>
+    require([
+      "esri/Map",
+      "esri/views/MapView",
+      "esri/layers/FeatureLayer",
+      "esri/tasks/Locator",
+      "esri/symbols/SimpleMarkerSymbol",
+      "esri/geometry/Point",
+      "esri/Graphic"
+    ], function (Map, MapView, FeatureLayer, Locator, SimpleMarkerSymbol, Point, Graphic) {
+      var map = new Map({
+        basemap: "streets-navigation-vector"
+      });
+
+      var view = new MapView({
+        container: "viewDiv",
+        map: map,
+        zoom: 12 // Nivel de zoom
+      });
+
+      // Crear un símbolo para la ubicación en tiempo real
+      var markerSymbol = new SimpleMarkerSymbol({
+        color: [226, 119, 40],
+        outline: {
+          color: [255, 255, 255],
+          width: 2
+        }
+      });
+
+      // Habilitar la geolocalización del navegador
+      if ("geolocation" in navigator) {
+        navigator.geolocation.watchPosition(function (position) {
+          var latitude = position.coords.latitude;
+          var longitude = position.coords.longitude;
+
+          // Crear un punto con las coordenadas de geolocalización
+          var point = new Point({
+            longitude: longitude,
+            latitude: latitude
+          });
+
+          // Crear un marcador gráfico en la ubicación en tiempo real
+          var graphic = new Graphic({
+            geometry: point,
+            symbol: markerSymbol
+          });
+
+          // Añadir el marcador al mapa
+          view.graphics.removeAll(); // Limpiar marcadores anteriores
+          view.graphics.add(graphic);
+        });
+      }
+    });
+  </script>
+</body>
+</html>
+>>>>>>> 9eeda649c777f0ed730aeb777882743a06071fec
