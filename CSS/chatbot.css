@@ -76,8 +76,8 @@ body{
 }
 
 
-/*--Aqui se controla los botones del encabezado--*/
-	
+/*--Aqui se controla los botones del envabezado--*/
+
 .menu nav ul li a {
 	color: black;
 	font-size: 15px;
@@ -99,56 +99,7 @@ body{
 	margin: 0px 4px;
 }
 
-/*--modificar la imagen de social media al color deseado cuando el maus esta sobre el*/
-.menu .socialMedia img{
-	width: 50px;
-	z-index: 2;
-}
-
-.socialMedia img {
-    filter: grayscale(100%); /* Convierte la imagen en blanco y negro */
-    transition: filter 0.5s ease; /* Aplica una transición suave */
-    text-decoration: none;
-}
-
-.socialMedia:hover img {
-    filter: hue-rotate(180deg); /* Cambia el color a azul al pasar el ratón */
-    text-decoration: underline;
-}
 /*-------------------------------------------*/
-
-.menu .socialMedia {
-	margin: 0px 0px;
-}
-
-.menu .socialMedia a {
-	margin: 0px 4px;
-}
-
-
-
-/*--Aqui se controla los botones del envabezado--*/
-	
-.menu nav ul li a {
-	color: rgb(0, 103, 165);
-	font-size: 25px;
-	position: relative;
-}
-
-.menu nav ul li a:hover{
-	color: rgb(90, 174, 243);
-	text-decoration: underline rgb(90, 174, 243);
-}
-
-/*-------------------------------------------*/
-
-.menu .socialMedia {
-	margin: 0px 0px;
-}
-
-.menu .socialMedia a {
-	margin: 0px 4px;
-}
 
 /*--modificar la imagen de social media al color deseado cuando el maus esta sobre el*/
 .menu .socialMedia img{
@@ -243,23 +194,29 @@ body{
 
 /*--SISTEMA RESPONSIVO--*/
 /* Estilos para tamaños de pantalla más grandes */
+/*--SISTEMA RESPONSIVO--*/
+/* Estilos para tamaños de pantalla más grandes */
 @media (min-width: 1200px) {
     .menu {
-        margin-top: 10px;
+        margin: 0;
         display: flex;
         align-items: center;
     }
+    .container__cover{
+        padding-top: 80px;
+        padding-bottom: 100px;
+    }
 
     .logo img {
-        max-width: 200px; /* Ajusta el tamaño máximo del logotipo */
+        max-width: 150px; /* Ajusta el tamaño máximo del logotipo */
     }
 
     .menu nav {
-        margin: 0px 20px;
+        margin: 10px;
     }
 
     .menu nav ul li {
-        margin: 20px 20px;
+        margin: 10px 10px;
     }
 
     /* Otros estilos específicos para tamaños de pantalla más grandes */
@@ -267,17 +224,21 @@ body{
 
 
 /* Estilos para tamaños de pantalla más pequeños (menú hamburguesa) */
-@media (max-width: 1200px) {
+@media (max-width: 1199px) {
     .menu {
         flex-direction: column; /* Coloca los elementos en columna */
         text-align: center; /* Centra el texto */
+    }
+    .container__cover{
+        padding-top: 80px;
+        padding-bottom: 100px;
     }
     .menu nav ul {
         flex-direction: column;
     }
 
     .logo img {
-        max-width: 200px; /* Ajusta el tamaño máximo del logotipo */
+        max-width: 125px; /* Ajusta el tamaño máximo del logotipo */
     }
 
     .menu nav {
@@ -303,9 +264,9 @@ body{
     .menu nav.show-menu {
         display: flex;
         flex-direction: column;
-        background: rgba(225, 225, 225,0.9);
+        background: rgba(225, 225, 225, 0.9);
         position: absolute;
-        top: 145px;
+        top: 80px;
         left: 0;
         width: 100%;
         text-align: center;

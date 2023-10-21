@@ -34,7 +34,7 @@
 	<!--HEADER - MENU-->
 
 	<header>
-		<div class="container__header div__offset">
+		<div class="container__header">
 			<div class="logo">
 				<a href="p_principal.php">
 					<img src="../IMG/logo.png" alt="">
@@ -52,24 +52,26 @@
 			<div class="menu"> 
 				<nav>
 					<ul>
-						<li><a href="chatbot.php">Preguntame!</a></li>
-						<li><a href="../HTML/header_botones/hoteles/mostrar_producto.php">Hoteles</a></li>
-						<li><a href="#">Restaurantes</a></li>
-						<li><a href="#">Gastronomía</a></li>
-						<li><a href="#">Museos</a></li>
-						<li><a href="rutas.php">Rutas</a></li>
+						<li><a href="#" id="chatbot">Preguntame!</a></li>
+						<li><a href="#" id="hoteles">Hoteles</a></li>
+						<li><a href="#" id="restaurantes">Restaurantes</a></li>
+						<li><a href="#" id="gastronomia">Gastronomía</a></li>
+						<li><a href="#" id="museo">Museos</a></li>
+						<li><a href="#" id="rutas">Rutas</a></li>
 					</ul>
 				</nav>
 				
 				<div class="socialMedia">
-					<a href="#">
-						<img src="../../IMG/user.png" alt="">
+					<a href="#" id="ajustes">
+						<img src="../IMG/user.png" alt="">
 					</a>
 				</div>
 			</div>
 
 		</div>
 	</header>
+
+	<!--Portada de incio-->
 	<main>
 		<div class="container__cover div__offset">
 			<div id="chat_container">
