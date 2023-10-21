@@ -94,9 +94,6 @@ include '../../PHP/verificarRol_be.php';
         <input type="text" name="contacto"><br>
 
         <!-- Otros campos relevantes -->
-
-        <!-- Campo oculto -->
-        <input type="hidden" name="campo_oculto" id="campoOculto" value="">
         <input type="submit" value="Enviar">
     </form>
 
@@ -134,14 +131,6 @@ include '../../PHP/verificarRol_be.php';
             console.log("ID_Usuario: " + window.id);
             saludo.textContent = "Hola "+ window.usuario + ", aqui puedes subir informacion sobre los servicios que ofreses";
         });
-
-        //aqui se le da valor al campo oculto
-        document.addEventListener("DOMContentLoaded", function() {
-        // Obtén el campo oculto por su ID
-        var campoOculto = document.getElementById("campoOculto");
-        // Asigna un valor al campo oculto con JavaScript
-        campoOculto.value = "window.id";
-      });
         
     </script>
 
