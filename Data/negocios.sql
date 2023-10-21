@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 21-10-2023 a las 04:06:51
+-- Tiempo de generación: 21-10-2023 a las 11:51:59
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -31,11 +31,15 @@ CREATE TABLE `negocios` (
   `id` int(11) NOT NULL,
   `nombre` varchar(255) NOT NULL,
   `descripcion` text NOT NULL,
-  `ubicacion` varchar(255) NOT NULL,
   `imagen` varchar(255) NOT NULL,
   `horario` varchar(100) DEFAULT NULL,
   `contacto` varchar(100) DEFAULT NULL,
-  `usuario_id` int(11) NOT NULL
+  `usuario_id` int(11) NOT NULL,
+  `imagen2` varchar(255) DEFAULT NULL,
+  `imagen3` varchar(255) DEFAULT NULL,
+  `imagen4` varchar(255) DEFAULT NULL,
+  `latitud` varchar(255) DEFAULT NULL,
+  `longitud` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --

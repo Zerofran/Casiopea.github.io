@@ -75,7 +75,7 @@ include '../../PHP/verificarRol_be.php';
     <h3 id="hola"></h3><br>
     <h2>Subir Información del Negocio</h2>
     <div>
-        <form id="form1" action="subir_producto_be.php" method="POST" enctype="multipart/form-data">
+        <form id="form1" action="subir_informacion.php" method="POST" enctype="multipart/form-data">
 
             <label for="nombre">Nombre del Negocio:</label>
             <input type="text" name="nombre" required><br>
@@ -110,7 +110,6 @@ include '../../PHP/verificarRol_be.php';
 
         <h1>Crear boton de busqueda</h1>
         <p>esta parte es para crear el boton de previsualizacion de producto</p>
-    
         <form id="form2" action="subir_producto_be.php" method="post" enctype="multipart/form-data">
             <label for="nombre">Nombre del Producto:</label>
             <input type="text" name="nombre" required><br>
