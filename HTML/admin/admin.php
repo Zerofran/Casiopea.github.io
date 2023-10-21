@@ -7,7 +7,57 @@ include '../../PHP/verificarRol_be.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--
     <link rel="stylesheet" href="styles.css">
+-->
+    <style>
+      /* Estilo general del formulario */
+      form {
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      /* Estilo de etiquetas y campos de entrada */
+      label {
+        display: block;
+        margin-top: 10px;
+      }
+
+      input[type="text"],
+      textarea {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+
+      input[type="file"] {
+        margin-top: 5px;
+      }
+
+      /* Estilo para el botón de enviar */
+      input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+
+      /* Estilo para el campo oculto */
+      #campoOculto {
+        display: none; /* Esto ocultará el campo oculto */
+      }
+    </style>
+
     <title>Subir Información del Negocio</title>
 </head>
 <body>
