@@ -53,7 +53,7 @@
 				<nav>
 					<ul>
 						<li><a href="chatbot.php">Preguntame!</a></li>
-						<li><a href="Hoteles.php">Hoteles</a></li>
+						<li><a href="../HTML/header_botones/hoteles/mostrar_producto.php">Hoteles</a></li>
 						<li><a href="#">Restaurantes</a></li>
 						<li><a href="#">Gastronomía</a></li>
 						<li><a href="#">Museos</a></li>

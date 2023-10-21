@@ -1,0 +1,354 @@
+@font-face {
+    font-family: 'nunito';
+    src: url('../font/Nunito-Black.ttf') format('truetype');
+    /*font-family: 'nunito', Arial, sans-serif;*/
+}
+
+@font-face {
+    font-family: 'LemonMilk';
+    src: url('../font/LEMONMILK-Light.otf') format('truetype');
+    /*font-family: 'LemonMilk', Helvetica, sans-serif;*/
+}
+
+*{
+	color: rgb(255, 255 255);
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	text-decoration: none;
+	font-family: 'nunito', Arial, sans-serif;
+}
+
+
+body{
+	/* La imagen colocada es un placeolder ya que no tengo un fondo listo para usar*/
+	background-image: url(../IMG/img6.jpeg);
+	/*background: linear-gradient(to bottom, #6ab7f5, #fff); */
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+  }
+  
+  body:before {
+	/*---agregar el gradiente sobre la imagen---*/
+	content: "";
+	width: 100%;
+	min-height: 150vh;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: linear-gradient(to bottom, orange, skyblue);
+	opacity: 0.7;
+	z-index: -1;
+  }
+  
+/* Aqui empieza el codigo para el header */
+header {
+    width: 100%;
+    height: 145px;
+    position: fixed;
+    z-index: 100;
+    background-color: rgba(225, 225, 225, 0.9);
+}
+
+body{
+	background-color: white;
+}
+
+
+.container__header {
+	max-width: 1700px;
+	height: 100%;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0px 20px;
+
+}
+
+
+.logo{
+	display: flex;
+	align-items: center;
+	position: relative;
+	z-index: 1;
+}
+
+.logo img {
+	width: 200px;
+}
+
+.menu {
+	margin-top: 10px;
+	display: flex;
+	align-items: center;
+}
+
+.menu nav {
+	margin: 0px 20px;
+}
+
+.menu nav ul {
+	display: flex;
+}
+
+
+.menu nav ul li {
+	list-style: none;
+	margin: 25px 25px;
+}
+
+
+/*--Aqui se controla los botones del encabezado--*/
+	
+.menu nav ul li a {
+	color: rgb(0, 103, 165);
+	font-size: 25px;
+	position: relative;
+}
+
+.menu nav ul li a:hover{
+	color: rgb(90, 174, 243);
+	text-decoration: underline rgb(90, 174, 243);
+}
+
+/*-------------------------------------------*/
+
+.menu .socialMedia {
+	margin: 0px 0px;
+}
+
+.menu .socialMedia a {
+	margin: 0px 4px;
+}
+
+/*--modificar la imagen de social media al color deseado cuando el maus esta sobre el*/
+.menu .socialMedia img{
+	width: 50px;
+	z-index: 2;
+}
+
+.socialMedia img {
+    filter: grayscale(100%); /* Convierte la imagen en blanco y negro */
+    transition: filter 0.5s ease; /* Aplica una transición suave */
+    text-decoration: none;
+}
+
+.socialMedia:hover img {
+    filter: hue-rotate(180deg); /* Cambia el color a azul al pasar el ratón */
+    text-decoration: underline;
+}
+/*-----------------------------------------------------------------------------------*/
+
+.container__cover{
+	height: 145px;
+	width: 100%;
+}
+.cover{
+	max-width: 100%;
+	align-items: center;
+}
+/*Aqui se ara el estilo de los botones de Proximo destino*/
+
+.text_head{
+	margin-top: 30px;
+	margin-left: 20px;
+}
+
+
+/* Estilos para el contenedor del mapa */
+.map_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px; /* Altura del contenedor del mapa */
+    max-width: 100%; /* Ancho máximo del contenedor del mapa */
+    margin: 20px auto; /* Márgenes superior e inferior automáticos y margen izquierdo y derecho automático para centrar */
+}
+
+/* Estilos para el formulario */
+.container_form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px; /* Ancho máximo del formulario */
+    margin: 0 auto; /* Centrar el formulario en la página */
+    padding: 20px; /* Espaciado interno del formulario */
+}
+
+/* Estilos para los elementos del formulario */
+.container_form label,
+.container_form input,
+.container_form select,
+.container_form button {
+    margin-bottom: 15px; /* Espaciado entre elementos del formulario */
+    width: 100%; /* Ancho completo para asegurar responsividad */
+    box-sizing: border-box; /* Incluir relleno y borde en el ancho total */
+}
+
+
+/* Estilos para hacer el formulario responsivo */
+@media screen and (max-width: 768px) {
+    .container_form {
+        max-width: 300px; /* Ajusta el ancho máximo del formulario para dispositivos más pequeños */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container_form {
+        max-width: 200px; /* Ajusta el ancho máximo del formulario para dispositivos aún más pequeños */
+    }
+}
+
+
+/* Estilos para hacer el mapa responsivo */
+@media screen and (max-width: 768px) {
+    .map_container {
+        height: 300px; /* Ajusta la altura del contenedor del mapa para dispositivos más pequeños */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .map_container {
+        height: 200px; /* Ajusta la altura del contenedor del mapa para dispositivos aún más pequeños */
+    }
+}
+
+/*--SISTEMA RESPONSIVO--*/
+/* Estilos para tamaños de pantalla más grandes */
+@media (min-width: 1200px) {
+    .menu {
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+    }
+
+    .logo img {
+        max-width: 200px; /* Ajusta el tamaño máximo del logotipo */
+    }
+
+    .menu nav {
+        margin: 0px 20px;
+    }
+
+    .menu nav ul li {
+        margin: 20px 20px;
+    }
+
+    /* Otros estilos específicos para tamaños de pantalla más grandes */
+}
+
+
+/* Estilos para tamaños de pantalla más pequeños (menú hamburguesa) */
+@media (max-width: 1200px) {
+    @media (min-width: 1200px) {
+        .menu {
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+        }
+    
+        .logo img {
+            max-width: 200px; /* Ajusta el tamaño máximo del logotipo */
+        }
+    
+        .menu nav {
+            margin: 0px 20px;
+        }
+    
+        .menu nav ul li {
+            margin: 20px 20px;
+        }
+    
+        /* Otros estilos específicos para tamaños de pantalla más grandes */
+    }
+    
+    
+    /* Estilos para tamaños de pantalla más pequeños (menú hamburguesa) */
+    @media (max-width: 1200px) {
+        .menu {
+            flex-direction: column; /* Coloca los elementos en columna */
+            text-align: center; /* Centra el texto */
+        }
+        .menu nav ul {
+            flex-direction: column;
+        }
+    
+        .logo img {
+            max-width: 200px; /* Ajusta el tamaño máximo del logotipo */
+        }
+    
+        .menu nav {
+            display: none; /* Oculta el menú de navegación */
+        }
+    
+        .menu-toggle {
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 10px;
+        }
+    
+        .bar {
+            background: rgb(0, 103, 165);
+            height: 4px;
+            width: 30px;
+            margin: 3px 0;
+            transition: 0.4s;
+        }
+
+    /* Estilos para mostrar el menú desplegable */
+    .menu nav.show-menu {
+        display: flex;
+        flex-direction: column;
+        background: rgba(225, 225, 225, 0.9);
+        position: absolute;
+        top: 145px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        z-index: 1;
+    }
+
+    .menu nav.show-menu ul {
+        padding: 20px;
+    }
+
+    .menu nav.show-menu ul li {
+        list-style: none;
+        margin: 10px 0;
+    }
+}
+/* -------------------------------------- */
+
+
+.cerrar-sesion {
+    position: fixed;
+    bottom: 10px; /* Ajusta la distancia desde el borde inferior */
+    left: 10px; /* Ajusta la distancia desde el borde izquierdo */
+    background-color: red; /* Cambia el color de fondo */
+    color: white; /* Cambia el color del texto */
+    padding: 10px 20px; /* Ajusta el relleno */
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 200; /* Asegura que el botón esté sobre otros elementos */
+}
+
+.cerrar-sesion:hover {
+    background-color: darkred; /* Cambia el color de fondo al pasar el cursor sobre el botón */
+}
+
+
+/*----NOTAS PARA EL QUE REVISE MI CODIGO Y PARA MI----
+
+Reciclar el css ahorra mucho tiempo pero siempre se me van cosas repetidas
+copie el anterior css por que requiero agretgar unos estilos extra sin afectar
+el estilo de el loby principal.
+                                          
+                                          --ATTM: Francisco josue--
+
+PD:guardad el css y recargar cuando no se aplique correctamente y si no funciona poner un
+   nombre diferente y llamarlo correctamente en el html
+PD:Las imagenes usadas son muy pesadas hay que vajarles la resolcion manualmente 3k es demaciado

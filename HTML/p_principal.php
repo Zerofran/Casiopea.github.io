@@ -41,11 +41,11 @@ include '../PHP/verificarRol_be.php';
 				<nav>
 					<ul>
 						<li><a href="chatbot.php">Preguntame!</a></li>
-						<li><a href="Bontones/Hoteles.php">Hoteles</a></li>
+						<li><a href="../HTML/header_botones/hoteles/mostrar_producto.php">Hoteles</a></li>
 						<li><a href="#">Restaurantes</a></li>
 						<li><a href="#">Gastronomía</a></li>
 						<li><a href="#">Museos</a></li>
-						<li><a href="#">Rutas</a></li>
+						<li><a href="rutas.php">Rutas</a></li>
 					</ul>
 				</nav>
 				
