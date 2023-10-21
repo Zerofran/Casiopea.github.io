@@ -1,3 +1,14 @@
+<?php
+// Iniciar la sesión
+session_start();
+
+// Verificar si la sesión está iniciada
+if (isset($_SESSION['usuario'])) {
+    $urlDestino = "1true";
+} else {
+    $urlDestino = "0false";
+}
+?>
 
 
 <!DOCTYPE html>
@@ -36,12 +47,12 @@
 			<div class="menu"> 
 				<nav>
 					<ul>
-						<li><a href="chatbot.php">Preguntame!</a></li>
-						<li><a href="../HTML/header_botones/hoteles/mostrar_producto.php">Hoteles</a></li>
-						<li><a href="#">Restaurantes</a></li>
-						<li><a href="#">Gastronomía</a></li>
-						<li><a href="#">Museos</a></li>
-						<li><a href="rutas.php">Rutas</a></li>
+						<li><a href="#" id="chatbot">Preguntame!</a></li>
+						<li><a href="#" id="hoteles">Hoteles</a></li>
+						<li><a href="#" id="restaurantes">Restaurantes</a></li>
+						<li><a href="#" id="gastronomia">Gastronomía</a></li>
+						<li><a href="#" id="museo">Museos</a></li>
+						<li><a href="rutas.php" id="rutas">Rutas</a></li>
 					</ul>
 				</nav>
 				
@@ -193,5 +204,56 @@
 	<a href="../PHP/cerrar_sesion.php" class="cerrar-sesion">Cerrar Sesión</a>
 	<script type="text/javascript" src="../JS/carrusel.js"></script>
 	<script type="text/javascript" src="../JS/menuAmburgesa.js"></script>
+
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+		    // Obtener todas las etiquetas <a> que quieres cambiar
+		    const chatbot = document.getElementById("chatbot");
+		    const hoteles = document.getElementById("hoteles");
+		    const restaurantes = document.getElementById("restaurantes");
+		    const gastronomia = document.getElementById("gastronomia");
+		    const museo = document.getElementById("museo");
+		    const rutas = document.getElementById("rutas");
+
+		    // Verificar el valor de urlDestino
+		    var urlDestino = "<?php echo $urlDestino; ?>";
+
+		    if (urlDestino === "1true") {
+		        // Cambiar la URL para el enlace chatbot
+		        chatbot.href = "chatbot.php";
+
+		        // Cambiar la URL para el enlace hoteles
+		        hoteles.href = "../HTML/header_botones/hoteles/mostrar_producto.php";
+
+		        // Cambiar la URL para el enlace restaurantes
+		        restaurantes.href = "URL_si_sesion_iniciada.php";
+
+		        gastronomia.href = "URL_si_sesion_iniciada.php";
+
+		        museo.href = "URL_si_sesion_iniciada.php";
+
+		        rutas.href = "URL_si_sesion_iniciada.php";
+
+
+		    } else if (urlDestino === "0false") {
+		    	alert('se requiere una cuenta para permisos superiores')
+		        // Cambiar la URL para el enlace chatbot
+		        chatbot.href = "../index.php";
+
+		        // Cambiar la URL para el enlace hoteles
+		        hoteles.href = "../index.php";
+
+		        // Cambiar la URL para el enlace restaurantes
+		        restaurantes.href = "../index.php";
+
+		        gastronomia.href = "../index.php";
+
+		        museo.href = "../index.php";
+
+		        rutas.href = "../index.php";		    }
+		});
+	</script>
+
+
 </body>
 </html>
