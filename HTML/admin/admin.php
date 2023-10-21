@@ -11,9 +11,10 @@ include '../../PHP/verificarRol_be.php';
     <title>Subir Información del Negocio</title>
 </head>
 <body>
-    <h3 id="hola"></h3>
-    <h1>Subir Información del Negocio</h1>
-    <form action="subir_informacion.php" method="post" enctype="multipart/form-data">
+    <h3 id="hola"></h3><br>
+    <h2>Subir Información del Negocio</h2>
+    <form action="subir_informacion.php" method="POST" enctype="multipart/form-data">
+
         <label for="nombre">Nombre del Negocio:</label>
         <input type="text" name="nombre" required><br>
 
@@ -26,19 +27,19 @@ include '../../PHP/verificarRol_be.php';
         <label for="imagen">Imagen del Negocio:</label>
         <input type="file" name="imagen" accept="image/*" required><br>
 
-        <h1>Sube mas imagenes para mas informacion visual</h1>
+        <h2>Sube mas imagenes para mas informacion visual</h2>
         <label for="imagen2">Sube una segunda imagen:</label>
         <input type="file" name="imagen2" accept="image/*"><br>
-        <label for="imagen3">Imagen del Negocio:</label>
+        <label for="imagen3">Una tercera imagen nunca esta de mas:</label>
         <input type="file" name="imagen3" accept="image/*"><br>
-        <label for="imagen4">Imagen del Negocio:</label>
+        <label for="imagen4">Muestra mas de tu negocio:</label>
         <input type="file" name="imagen4" accept="image/*"><br>
 
-        <h1>El cliente debe de saber en que orarios operas</h1>
+        <h2>El cliente debe de saber en que orarios atiendes</h2>
         <label for="horario">Horario de Atención:</label>
         <input type="text" name="horario"><br>
 
-        <h1>tu numero es importante para un trato directo</h1>
+        <h2>tu numero es importante para un trato directo</h2>
         <label for="contacto">Información de Contacto:</label>
         <input type="text" name="contacto"><br>
 
@@ -49,7 +50,7 @@ include '../../PHP/verificarRol_be.php';
         <input type="submit" value="Enviar">
     </form>
 
-<!--------------------------------Scripts------------------------------------>
+<!--------------------------------Scripts para optener y dar valores------------------------------------>
 <script type="text/javascript">
         const cargos = document.getElementById('cargos');
         const saludo = document.getElementById('hola');
@@ -78,8 +79,9 @@ include '../../PHP/verificarRol_be.php';
       });
         document.addEventListener('DOMContentLoaded', function () {
             console.log("prueba de los id y usuarios");
-            console.log("ID: " + window.id_cargo);
-            console.log("Usuario: " +window.usuario);
+            console.log("ID_Cargo: " + window.id_cargo);
+            console.log("Usuario: " + window.usuario);
+            console.log("ID_Usuario: " + window.id);
             saludo.textContent = "Hola "+ window.usuario + ", aqui puedes subir informacion sobre los servicios que ofreses";
         });
 
@@ -88,7 +90,7 @@ include '../../PHP/verificarRol_be.php';
         // Obtén el campo oculto por su ID
         var campoOculto = document.getElementById("campoOculto");
         // Asigna un valor al campo oculto con JavaScript
-        campoOculto.value = "Este valor es oculto";
+        campoOculto.value = "window.id";
       });
         
     </script>
