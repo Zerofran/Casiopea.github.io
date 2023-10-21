@@ -57,7 +57,7 @@ if (isset($_SESSION['usuario'])) {
 				</nav>
 				
 				<div class="socialMedia">
-					<a href="#">
+					<a href="#" id="ajustes">
 						<img src="../IMG/user.png" alt="">
 					</a>
 				</div>
@@ -213,7 +213,8 @@ if (isset($_SESSION['usuario'])) {
 		    const restaurantes = document.getElementById("restaurantes");
 		    const gastronomia = document.getElementById("gastronomia");
 		    const museo = document.getElementById("museo");
-		    const rutas = document.getElementById("rutas");
+		    const rutas = document.getElementById("rutas"); 
+		    const ajustes = document.getElementById("ajustes");
 
 		    // Verificar el valor de urlDestino
 		    var urlDestino = "<?php echo $urlDestino; ?>";
@@ -234,6 +235,8 @@ if (isset($_SESSION['usuario'])) {
 
 		        rutas.href = "URL_si_sesion_iniciada.php";
 
+		        ajustes.href = "admin/ajustes.php";
+
 
 		    } else if (urlDestino === "0false") {
 		    	alert('se requiere una cuenta para permisos superiores')
@@ -250,7 +253,10 @@ if (isset($_SESSION['usuario'])) {
 
 		        museo.href = "../index.php";
 
-		        rutas.href = "../index.php";		    }
+		        rutas.href = "../index.php";	
+
+		        ajustes.href = "admin/ajustes.php";	    
+		    }
 		});
 	</script>
 
