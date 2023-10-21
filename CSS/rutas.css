@@ -341,8 +341,9 @@ body{
 }
 
 
-/*----NOTAS PARA EL QUE REVISE MI CODIGO Y PARA MI----
+/*----NOTAS PARA EL QUE REVISE MI CODIGO Y PARA MI----*/
 
+/*
 Reciclar el css ahorra mucho tiempo pero siempre se me van cosas repetidas
 copie el anterior css por que requiero agretgar unos estilos extra sin afectar
 el estilo de el loby principal.
@@ -351,4 +352,5 @@ el estilo de el loby principal.
 
 PD:guardad el css y recargar cuando no se aplique correctamente y si no funciona poner un
    nombre diferente y llamarlo correctamente en el html
-PD:Las imagenes usadas son muy pesadas hay que vajarles la resolcion manualmente 3k es demaciado
+PD:Las imagenes usadas son muy pesadas hay que vajarles la resolcion manualmente 3k es demaciado 
+*/

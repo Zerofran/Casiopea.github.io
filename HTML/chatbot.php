@@ -57,7 +57,7 @@
 						<li><a href="#">Restaurantes</a></li>
 						<li><a href="#">Gastronomía</a></li>
 						<li><a href="#">Museos</a></li>
-						<li><a href="#">Rutas</a></li>
+						<li><a href="rutas.php">Rutas</a></li>
 					</ul>
 				</nav>
 				
@@ -83,7 +83,7 @@
 			</div>
 <		</div>	
 	</main>
-  <script src="../../JS/chatbot.js"></script>
+  <script src="../JS/chatbot.js"></script>
   <script type="text/javascript" src="../../JS/menuAmburgesa.js"></script>
 </body>
 </html>

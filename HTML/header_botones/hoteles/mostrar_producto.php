@@ -12,43 +12,46 @@ include '../../../PHP/verificarRol_be.php';
     <title>Filtro de Hoteles</title>
 </head>
 <body>
+
     <!--HEADER - MENU-->
 
-    <header>
-        <div class="container__header">
-            <div class="logo">
-                <a href="../../../HTML/p_principal.php">
-                    <img src="../../../IMG/logo.png" alt="">
-                </a>
-            </div>
+	<header>
+		<div class="container__header div__offset">
+			<div class="logo">
+				<a href="../../../HTML/p_principal.php">
+					<img src="../../../IMG/logo.png" alt="">
+				</a>
+			</div>
 
-            <!-- Agregar aquí el botón de menú hamburguesa -->
-            <div class="menu-toggle">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
-            <!-- Fin del botón de menú hamburguesa -->
+	        <!-- Agregar aquí el botón de menú hamburguesa -->
+	        <div class="menu-toggle">
+	            <div class="bar"></div>
+	            <div class="bar"></div>
+	            <div class="bar"></div>
+	        </div>
+	        <!-- Fin del botón de menú hamburguesa -->
 
-            <div class="menu"> 
-                <nav>
-                    <ul>
-                        <li><a href="#" class="btn_axes">Hoteles</a></li>
-                        <li><a href="#">Restaurantes</a></li>
-                        <li><a href="#">Gastronomía</a></li>
-                        <li><a href="#">rutas</a></li>
-                    </ul>
-                </nav>
-                
-                <div class="socialMedia">
-                    <a href="../../admin/perfil.php">
-                        <img src="../../../IMG/user.png" alt="">
-                    </a>
-                </div>
-            </div>
+			<div class="menu"> 
+				<nav>
+					<ul>
+						<li><a href="../../../HTML/chatbot.php">Preguntame!</a></li>
+						<li><a href="mostrar_producto.php">Hoteles</a></li>
+						<li><a href="#">Restaurantes</a></li>
+						<li><a href="#">Gastronomía</a></li>
+						<li><a href="#">Museos</a></li>
+						<li><a href="../../../HTML/rutas.php">Rutas</a></li>
+					</ul>
+				</nav>
+				
+				<div class="socialMedia">
+					<a href="#">
+						<img src="../../IMG/user.png" alt="">
+					</a>
+				</div>
+			</div>
 
-        </div>
-    </header>
+		</div>
+	</header>
     <main>
         <div class="container__cover div__offset">
 

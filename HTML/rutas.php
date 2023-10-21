@@ -25,7 +25,7 @@ include '../PHP/verificarRol_be.php';
 		<div class="container__header">
 			<div class="logo">
 				<a href="p_principal.php">
-					<img src="../../IMG/logo.png" alt="">
+					<img src="../IMG/logo.png" alt="">
 				</a>
 			</div>
 
