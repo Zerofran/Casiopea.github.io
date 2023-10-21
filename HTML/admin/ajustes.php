@@ -39,7 +39,7 @@ include '../../PHP/verificarRol_be.php';
 			<div class="menu"> 
 				<nav>
 					<ul>
-						<li><a href="header_botones/hoteles/mostrar_producto.php">Hoteles</a></li>
+						<li><a href="#">Hoteles</a></li>
 						<li><a href="#">Restaurantes</a></li>
 						<li><a href="#">Gastronomía</a></li>
 						<li><a href="#">rutas</a></li>

@@ -75,7 +75,7 @@ include '../../PHP/verificarRol_be.php';
     <h3 id="hola"></h3><br>
     <h2>Subir Información del Negocio</h2>
     <div>
-        <form id="form1" action="subir_informacion.php" method="POST" enctype="multipart/form-data">
+        <form id="form1" action="subir_producto_be.php" method="POST" enctype="multipart/form-data">
 
             <label for="nombre">Nombre del Negocio:</label>
             <input type="text" name="nombre" required><br>
@@ -99,7 +99,7 @@ include '../../PHP/verificarRol_be.php';
             <label for="imagen4">Muestra mas de tu negocio:</label>
             <input type="file" name="imagen4" accept="image/*"><br>
 
-            <h2>El cliente debe de saber en que orarios atiendes</h2>
+            <h2>El cliente debe de saber en que horarios atiendes</h2>
             <label for="horario">Horario de Atención:</label>
             <input type="text" name="horario"><br>
 
@@ -126,6 +126,14 @@ include '../../PHP/verificarRol_be.php';
                 <option value="cordoba">Córdoba Nicaragüense (NIO)</option>
                 <option value="dollar">Dólar Estadounidense (USD)</option>
                 <option value="euro">Euro (EUR)</option>
+                <!-- Agregar más monedas según sea necesario -->
+            </select><br>
+
+            <label for="moneda">Tipo de negocio:</label>
+            <select name="moneda">
+                <option value="cordoba">Restaurante</option>
+                <option value="dollar">Hotel</option>
+                <option value="euro">Gastronomia</option>
                 <!-- Agregar más monedas según sea necesario -->
             </select><br>
 
