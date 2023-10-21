@@ -13,6 +13,8 @@ if (!isset($_SESSION['usuario'])) {
     die();
 }
 
+    $conexion = mysqli_connect("localhost", "root", "", "login_registro_db");
+
 if (!$conexion) {
     die('Error en la conexión a la base de datos: ' . mysqli_connect_error());
 }
@@ -35,7 +37,7 @@ if (!$resultado) {
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $conexion = mysqli_connect("localhost", "root", "", "login_registro_db");
+
     if ($conexion->connect_error) {
         die("Error en la conexión a la base de datos: " . $conexion->connect_error);
     }
