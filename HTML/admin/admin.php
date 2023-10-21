@@ -44,10 +44,9 @@ include '../../PHP/verificarRol_be.php';
 
         <!-- Otros campos relevantes -->
 
-        <!-- Campo oculto para almacenar el ID del usuario que sube la información -->
-        <input type="hidden" name="usuario_id" value="ID_DEL_USUARIO_AQUI">
-
-        <input type="submit" value="Subir Información">
+        <!-- Campo oculto -->
+        <input type="hidden" name="campo_oculto" id="campoOculto" value="">
+        <input type="submit" value="Enviar">
     </form>
 
 <!--------------------------------Scripts------------------------------------>
@@ -83,6 +82,16 @@ include '../../PHP/verificarRol_be.php';
             console.log("Usuario: " +window.usuario);
             saludo.textContent = "Hola "+ window.usuario + ", aqui puedes subir informacion sobre los servicios que ofreses";
         });
+
+        //aqui se le da valor al campo oculto
+        document.addEventListener("DOMContentLoaded", function() {
+        // Obtén el campo oculto por su ID
+        var campoOculto = document.getElementById("campoOculto");
+        // Asigna un valor al campo oculto con JavaScript
+        campoOculto.value = "Este valor es oculto";
+      });
+        
     </script>
+
 </body>
 </html>
