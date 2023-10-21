@@ -84,8 +84,8 @@ include '../PHP/verificarRol_be.php';
         </div>
         <div style="background-color: rgba(red, green, blue, 0); height: 400px; width: 400px;" class="map_container" id="map-container"></div>
 
-        <script src="script.js"></script>
-
+        <script src="../JS/rutaAtoB.js"></script>
+		<script src="../JS/menuAmburgesa.js"></script>
     </div>
 </body>
 </html>
