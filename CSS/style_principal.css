@@ -21,11 +21,10 @@
 
 header {
     width: 100%;
-    height: 120px;
+    height: 145px;
     position: fixed;
     z-index: 100;
-    background-color: rgba(128, 128, 128, 0.95);
-    z-index: 10;
+    background-color: rgba(225, 225, 225, 0.9);
 }
 
 body{
@@ -73,21 +72,73 @@ body{
 
 .menu nav ul li {
 	list-style: none;
-	margin: 20px 20px;
+	margin: 25px 25px;
 }
 
 
 /*--Aqui se controla los botones del envabezado--*/
 	
 .menu nav ul li a {
-	color: skyblue;
-	font-size: 30px;
+	color: rgb(0, 103, 165);
+	font-size: 25px;
 	position: relative;
 }
 
 .menu nav ul li a:hover{
-	color: brown;
-	text-decoration: underline white;
+	color: rgb(90, 174, 243);
+	text-decoration: underline rgb(90, 174, 243);
+}
+
+/*-------------------------------------------*/
+
+.menu .socialMedia {
+	margin: 0px 0px;
+}
+
+.menu .socialMedia a {
+	margin: 0px 4px;
+}
+
+
+
+/*--Aqui se controla los botones del envabezado--*/
+	
+.menu nav ul li a {
+	color: rgb(0, 103, 165);
+	font-size: 25px;
+	position: relative;
+}
+
+.menu nav ul li a:hover{
+	color: rgb(90, 174, 243);
+	text-decoration: underline rgb(90, 174, 243);
+}
+
+/*-------------------------------------------*/
+
+.menu .socialMedia {
+	margin: 0px 0px;
+}
+
+.menu .socialMedia a {
+	margin: 0px 4px;
+}
+
+/*--modificar la imagen de social media al color deseado cuando el maus esta sobre el*/
+.menu .socialMedia img{
+	width: 50px;
+	z-index: 2;
+}
+
+.socialMedia img {
+    filter: grayscale(100%); /* Convierte la imagen en blanco y negro */
+    transition: filter 0.5s ease; /* Aplica una transición suave */
+    text-decoration: none;
+}
+
+.socialMedia:hover img {
+    filter: hue-rotate(180deg); /* Cambia el color a azul al pasar el ratón */
+    text-decoration: underline;
 }
 
 /*-------------------------------------------*/
