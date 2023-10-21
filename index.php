@@ -59,7 +59,7 @@
 				    <h2>Registrarse</h2>
 
 				    <input type="text" placeholder="Nombre y apellido" name="nombre_completo" id="nombre" required oninput="listo();">
-
+					<input type="text" placeholder="Dia/Mes/Año" name="fnacimiento" id="fnacimiento" required oninput="listo();">
 				    <input type="text" placeholder="Correo electrónico" name="correo" id="correo" required oninput="listo(); validarCorreoRegistro(this);">
 				    <div class="estado-correo-registro" style="color: red;"></div>
 				    <input type="text" placeholder="Usuario" name="usuario" id="usuario" required oninput="listo();">
